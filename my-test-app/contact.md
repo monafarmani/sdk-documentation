@@ -16,5 +16,6 @@ layout:
     visible: true
 ---
 
-# My Test App
+# 📞 Contact
 
+For support or questions, please contact us at [support@my](mailto:support@myawesomeapp.com)testapp.com.You can also follow us on Twitter at @mytestapp.

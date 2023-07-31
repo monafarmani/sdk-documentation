@@ -16,5 +16,6 @@ layout:
     visible: true
 ---
 
-# My Test App
+# 📃 License
 
+My Test App is released under the MIT License. See the LICENSE file for details.

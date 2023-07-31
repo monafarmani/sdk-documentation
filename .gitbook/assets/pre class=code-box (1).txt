@@ -1,0 +1,11 @@
+<pre class="code-box">
+<code class="language-kotlin">
+ @Composable
+fun Greeting(names: List<String>) {
+    for (name in names) {
+        Text("Hello $name")
+    }
+}
+
+  </code>
+</pre>

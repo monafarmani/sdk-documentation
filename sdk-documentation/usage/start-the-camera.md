@@ -41,3 +41,70 @@ Gizo.app.gizoAnalysis.attachPreview(previewView)
 ```
 {% endtab %}
 {% endtabs %}
+
+## Video Recording Options in MyTestSDK
+
+### <mark style="color:purple;">Overview</mark>
+
+The video recording options in MyTestSDK allow developers to easily integrate video recording capabilities into their Android applications. This documentation provides instructions on how to utilize the start and stop recording functionality, as well as start and stop the camera, and lock and unlock the preview.
+
+### <mark style="color:purple;">Start and Stop Recording</mark>
+
+To start and stop video recording using MyTestSDK , use the following code:
+
+**Note**: analysis, GPS, IMU, video and battery files are saved from startCamera to stopCamera.&#x20;
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+// Start video recording
+coroutineScope.launch {
+    gizoAnalysis.startRecording { event ->
+        when (event) {
+            is VideoRecordEvent.Finalize -> {
+                if (event.hasError()) {
+                    //Do something
+             }
+          }
+       }
+     }
+ }
+ 
+ // Stop video recording
+ gizoAnalysis.stopRecording()
+```
+{% endtab %}
+{% endtabs %}
+
+### <mark style="color:purple;">Lock and Unlock Preview</mark>
+
+Lock preview attaches the preview screen , while unlock preview detaches it .They are used to give developers the ability to display preview or not.
+
+To lock and unlock the preview using MyTestSDK , follow these steps:
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+// lock preview
+gizoAnalysis.lockPreview()
+
+// unlock preview
+gizoAnalysis.unlockPreview(previewView)
+```
+{% endtab %}
+{% endtabs %}
+
+### <mark style="color:purple;">Stop camera</mark>
+
+Stop Camera is called when an activity is about to be destroyed or removed from memory.
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+override fun onDestroy() {
+    super.onDestroy()
+    gizoAnalysis.stopCamera()
+}
+```
+{% endtab %}
+{% endtabs %}

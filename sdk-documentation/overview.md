@@ -18,7 +18,7 @@ layout:
 
 # 📋 Overview
 
-My Test library is a controlling driving library for Android.
+MyTestSDK  library is a controlling driving library for Android.
 
 
 

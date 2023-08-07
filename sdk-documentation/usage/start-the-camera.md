@@ -18,7 +18,7 @@ layout:
 
 # Start The Camera
 
-To start using the SDK we need to [start the camera ](broken-reference), for this reason we need a lifecycle like an activity or a fragment and implement these lines of code in the Activity: first we start the camera, second preview is attached.
+To start using the SDK we need to start the camera, for this reason we need a lifecycle like an activity or a fragment and implementation of these lines of code in the Activity: first we start the camera, second preview is attached.
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -46,7 +46,7 @@ Gizo.app.gizoAnalysis.attachPreview(previewView)
 
 ### <mark style="color:purple;">Overview</mark>
 
-The video recording options in MyTestSDK allow developers to easily integrate video recording capabilities into their Android applications. This documentation provides instructions on how to utilize the start and stop recording functionality, as well as start and stop the camera, and lock and unlock the preview.
+The video recording options in MyTestSDK allow developers to easily integrate video recording capabilities into their Android applications. This documentation provides instructions on how to utilize the start and stop recording functionality,  start and stop the camera, as well as lock and unlock the preview.
 
 ### <mark style="color:purple;">Start and Stop Recording</mark>
 
@@ -80,7 +80,7 @@ coroutineScope.launch {
 
 Lock preview attaches the preview screen , while unlock preview detaches it .They are used to give developers the ability to display preview or not.
 
-To lock and unlock the preview using MyTestSDK , follow these steps:
+To lock and unlock the preview using MyTestSDK , add these lines:
 
 {% tabs %}
 {% tab title="Kotlin" %}

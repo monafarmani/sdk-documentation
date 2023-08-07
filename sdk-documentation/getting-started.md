@@ -134,7 +134,7 @@ class Application : Application() {
 {% endtab %}
 {% endtabs %}
 
-In the example above, we create a new instance of the Application class and call the initialize method to initialize the sdk.
+In the example above, we create a new instance of the Application class and call the initialize method to initialize the SDK.
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -146,7 +146,7 @@ In the example above, we create a new instance of the Application class and call
 {% endtab %}
 {% endtabs %}
 
-In the examole above, we add some lines of code to AndroidManifest.xml as well.
+In the example above, we add some lines of code to AndroidManifest.xml as well.
 
-**Note:** For using features of the sdk you need to add [Model ](broken-reference)and required [App Options Setting](broken-reference) in the following steps.
+**Note:** For using features of the SDK you need to add [Model ](broken-reference)and required [App Options Setting](broken-reference) in the following steps.
 

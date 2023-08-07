@@ -32,7 +32,7 @@ To start using the SDK we need to start the camera, for this reason we need a li
 
 Preview View is a Custom View that displays the camera feed for CameraX's Preview use case. This class manages the preview Surface's lifecycle. It internally uses either a TextureView or SurfaceView to display the camera feed, and applies required transformations on them to correctly display the preview, this involves correcting their aspect ratio, scale and rotation.
 
-So , to display camera a previewView should be attached as well.
+So, to display camera a previewView should be attached as well.
 
 {% tabs %}
 {% tab title="Kotlin" %}

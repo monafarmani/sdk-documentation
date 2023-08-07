@@ -52,8 +52,6 @@ The video recording options in MyTestSDK allow developers to easily integrate vi
 
 To start and stop video recording using MyTestSDK , use the following code:
 
-**Note**: analysis, GPS, IMU, video and battery files are saved from startCamera to stopCamera.&#x20;
-
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin

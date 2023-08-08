@@ -5,7 +5,7 @@
   * [🚀 Getting Started](sdk-documentation/getting-started.md)
   * [⚙ Usage](sdk-documentation/usage/README.md)
     * [Permissions](sdk-documentation/usage/permissions.md)
-    * [Start The Camera](sdk-documentation/usage/start-the-camera.md)
+    * [Gizo Analysis](sdk-documentation/usage/gizo-analysis.md)
     * [App Options Setting](sdk-documentation/usage/app-options-setting/README.md)
       * [GizoAnalysisSettings](sdk-documentation/usage/app-options-setting/gizoanalysissettings.md)
   * [📖 API Documentation](sdk-documentation/api-documentation.md)

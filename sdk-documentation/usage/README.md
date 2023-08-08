@@ -20,7 +20,7 @@ layout:
 
 To use MyTestSDK in your app, follow these steps:
 
-* To start to use the SDK we need to start the [Gizo Analysis](broken-reference). for this reason we need a lifecycle like an activity or a fragment and implement some lines of code in Main Activity. Based on the [settings](broken-reference) applied by the developer, a series of features will be added to the SDK .
+* To start to use the SDK we need to start the [Gizo Analysis](broken-reference). for this reason we need a lifecycle like an activity or a fragment and implement some lines of code in Main Activity. Based on the [settings](broken-reference) applied by the developers, a series of features will be added to the SDK .
 * The SDK requires certain [permissions ](permissions.md)in order to function properly. These permissions are necessary to enable the GPS setting, capturing videos, mapbox navigation & saving files in download folder.
 * The SDK provides several [options ](broken-reference)that can be configured at the app level to customize its behavior. These options can be set in the Application class of your app.
 * Model loading which was explained in [Analysis setting](broken-reference).

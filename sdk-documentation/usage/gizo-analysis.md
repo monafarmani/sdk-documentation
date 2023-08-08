@@ -36,7 +36,7 @@ Based on the [settings](broken-reference) applied by the developer, a series of 
 
 ### <mark style="color:purple;">Stop Gizo Analysis</mark>
 
-When Stop Gizo Analysis is called all settings are inactive.&#x20;
+When Stop Gizo Analysis is called all settings get inactive.&#x20;
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -86,7 +86,9 @@ Gizo.app.gizoAnalysis.attachPreview(previewView)
 {% endtab %}
 {% endtabs %}
 
-## Video Recording Options in MyTestSDK.
+###
+
+### Video Recording Options in MyTestSDK
 
 ### <mark style="color:purple;">Lock and Unlock Preview</mark>
 

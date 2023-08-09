@@ -9,7 +9,7 @@
     * [App Options](sdk-documentation/usage/app-options/README.md)
       * [GizoAnalysisSettings](sdk-documentation/usage/app-options/gizoanalysissettings.md)
       * [GizoGpsSetting](sdk-documentation/usage/app-options/gizogpssetting.md)
-    * [GizoImuSetting](sdk-documentation/usage/gizoimusetting.md)
+      * [GizoImuSetting](sdk-documentation/usage/app-options/gizoimusetting.md)
   * [📖 API Documentation](sdk-documentation/api-documentation.md)
   * [✏ Change Log](sdk-documentation/change-log.md)
   * [⚙ Configuration](sdk-documentation/configuration.md)

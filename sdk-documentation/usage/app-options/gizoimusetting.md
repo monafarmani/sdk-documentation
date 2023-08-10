@@ -20,9 +20,11 @@ layout:
 
 ## Overview
 
-The IMU settings in MyTestSDK allow developers to utilize the sensors that make up the device's IMU. The IMU typically consists of the **accelerometer**, **gyroscope** and **gravity**.
+The IMU setting in MyTestSDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the **accelerometer**, **gyroscope,** and **gravity**.
 
-For this reason , Add these lines of code in Application class , onCreate function , inside Gizo.initialize to set the Gizo GPS Settings.
+Gizo IMU setting is used to customize some behavior and functionality of our library including specifying where to save IMU files, the period of time that an IMU data row is saved in a CSV file, the initial delay to save IMU data, the format to save date time and so on...
+
+For this reason, add these lines of code in the Application class, onCreate function, inside Gizo.initialize to set the Gizo GPS Settings.
 
 {% tabs %}
 {% tab title="Kotlin" %}

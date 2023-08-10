@@ -28,10 +28,10 @@ MyTestSDK is a powerful and versatile library that provides a great analysis of 
 
 ## prerequisites
 
+Before you begin using MyTestSDK, make sure you have the following prerequisites installed and set up in your development environment:
+
 * Install the latest version of the Android Studio.
 * Install Mapbox SDK for Android and get access token
-
-Before you begin using MyTestSDK, make sure you have the following prerequisites installed and set up in your development environment:
 
 
 

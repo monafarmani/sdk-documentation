@@ -87,4 +87,26 @@ dependencies {
 In Android Studio, the `build.gradle` file is a configuration file that is used to define various settings and dependencies for your Android project. It is located in the root directory of your project and each module within the project.
 
 4. We need to implement settings for Mapbox because we use it in our library, so add the following lines to settings.gradle too:
+5. Sync your project with Gradle.
+
+Locate the toolbar at the top of the Android Studio window. There, you should see a series of icons, including a circular arrow icon labeled "Sync Project with Gradle Files."
+
+* If the icon is highlighted and clickable, it means the project is not synchronized with the `build.gradle` files.
+* If the icon is grayed out, it means the project is already synchronized.
+
+
+
+## Using the SDK in your Android Application
+
+### &#x20;<mark style="color:purple;">Initialize the SDK</mark>
+
+To initialize the SDK, you will need to create a new instance of the Application class in your app's module:
+
+In the example above, we create a new instance of the Application class and call the initialize method to initialize the SDK.
+
+In the example above, we add some lines of code to AndroidManifest.xml as well.
+
+In the AndroidManifest.xml file, the `<application>` element is used to define the characteristics and configurations of your Android application. The `android:name` attribute within the `<application>` element specifies the name of the class that represents the application itself.
+
+**Note:** For using features of the SDK you need to add Model and required App Options Setting in the following steps.
 

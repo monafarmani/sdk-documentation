@@ -32,7 +32,7 @@ Managing permissions properly is crucial for maintaining user trust and ensuring
 
 The following permissions are required by the SDK:
 
-<table><thead><tr><th width="348">PERMISSIONS</th><th>WHERE TO USE</th></tr></thead><tbody><tr><td>ACCESS_COARSE_LOCATION</td><td>in GPS setting.</td></tr><tr><td>ACCESS_FINE_LOCATION</td><td>in GPS setting.</td></tr><tr><td>CAMERA</td><td>in capturing videos.</td></tr><tr><td>ACCESS_NETWORK_STATE</td><td>in mapbox navigation.</td></tr><tr><td>WRITE_EXTERNAL_STORAGE</td><td>in saving files in download folder.</td></tr></tbody></table>
+<table><thead><tr><th width="348">PERMISSIONS</th><th>WHERE TO USE</th></tr></thead><tbody><tr><td>ACCESS_COARSE_LOCATION</td><td>In GPS setting.</td></tr><tr><td>ACCESS_FINE_LOCATION</td><td>In GPS setting.</td></tr><tr><td>CAMERA</td><td>In capturing videos.</td></tr><tr><td>ACCESS_NETWORK_STATE</td><td>In Mapbox navigation.</td></tr><tr><td>WRITE_EXTERNAL_STORAGE</td><td>In saving files in the download folder.</td></tr></tbody></table>
 
 ## <mark style="color:purple;">Permissions Helper</mark>&#x20;
 

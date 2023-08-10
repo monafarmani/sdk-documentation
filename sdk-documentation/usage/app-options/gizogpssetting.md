@@ -20,11 +20,13 @@ layout:
 
 ## Overview
 
-The GPS settings in MyTestSDK allow developers to incorporate GPS functionality into their Android applications. This documentation provides instructions on enabling GPS, accessing location, speed limit and speed.
+The GPS settings in MyTestSDK allow developers to incorporate GPS functionality into their Android applications. This documentation provides instructions on enabling GPS, accessing location, speed limit, and speed.
 
-For this reason, add these lines of code in Application class, onCreate function, inside Gizo.initialize to set the Gizo GPS Settings.
+Gizo GPS setting is used to customize some behavior and functionality of our library including specifying a loop of time for getting location in 1 second, maximum amount of initial wait time, where to save GPS file, the period of time that a GPS data row is saved in CSV file, the initial delay to save GPS data, the format to save date time and so on...
 
-**Note**: we need to get MAPBOX\_PUBLIC\_KEY from [mapbox SDK](https://docs.mapbox.com/android/maps/guides/install/).
+For this reason, add these lines of code in the Application class, onCreate function, inside Gizo.initialize to set the Gizo GPS Settings.
+
+**Note**: we need to get MAPBOX\_PUBLIC\_KEY from Mapbox SDK.
 
 {% tabs %}
 {% tab title="Kotlin" %}

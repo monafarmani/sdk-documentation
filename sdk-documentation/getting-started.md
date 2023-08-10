@@ -18,10 +18,22 @@ layout:
 
 # 🚀 Getting Started
 
-## Requirements
+Welcome to MyTestSDK! This guide will help you get started with integrating and using our library in your Android projects.
 
-* Install the latest version of Android studio.
-* Install [mapbox ](https://docs.mapbox.com/android/maps/guides/install/)SDK for Android and get access token.
+## Introduction
+
+MyTestSDK is a powerful and versatile library that provides a great analysis of the way people drive their cars. MyTestSDK allows precise control over driving, monitoring intelligence, and issuing warnings for risk of accidents…
+
+
+
+## prerequisites
+
+* Install the latest version of the Android Studio.
+* Install Mapbox SDK for Android and get access token
+
+Before you begin using MyTestSDK, make sure you have the following prerequisites installed and set up in your development environment:
+
+
 
 ## To use My Test library, follow these steps:
 
@@ -48,6 +60,10 @@ repositories {
 {% endtab %}
 {% endtabs %}
 
+The `settings.gradle` file in Android Studio is a configuration file used to define your project’s settings and modules. It is located in the root directory of your project, alongside the `build.gradle` file.
+
+Some key aspects of the `settings.gradle` file include Project Structure, Module Inclusion, Module Names, and Multi-Module Projects.
+
 3. Add the following lines to your app-level `build.gradle` file:
 
 {% tabs %}
@@ -68,85 +84,7 @@ dependencies {
 {% endtab %}
 {% endtabs %}
 
-4. We need to implement settings for map box because it is used in our library, so add the following lines to settings.gradle too:
+In Android Studio, the `build.gradle` file is a configuration file that is used to define various settings and dependencies for your Android project. It is located in the root directory of your project and each module within the project.
 
-{% tabs %}
-{% tab title="Groovy" %}
-```kotlin
-allprojects {
-    repositories {
-      maven {
-            url 'https://api.mapbox.com/downloads/v2/releases/maven'
-            authentication {
-                basic(BasicAuthentication)
-            }
-            credentials {
-                username = "mapbox"
-                password = "MAPBOX_SECRET_KEY"
-            }
-        }
-    }
-}
-```
-{% endtab %}
-
-{% tab title="Kts" %}
-```kotlin
-repositories {
-    maven {
-        url = uri("https://api.mapbox.com/downloads/v2/releases/maven")
-        authentication {
-            create<BasicAuthentication>("basic")
-        }
-        credentials {
-            username = "mapbox"
-            password = "MAPBOX_SECRET_KEY"
-        }
-    }
-}
-```
-{% endtab %}
-{% endtabs %}
-
-5. Sync your project with Gradle.
-
-## Using the SDK in your Android Application
-
-### &#x20;<mark style="color:purple;">Initialize the SDK</mark>
-
-To initialize the SDK, you will need to create a new instance of the Application class in your app's module:
-
-{% tabs %}
-{% tab title="Kotlin" %}
-```kotlin
-class Application : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-
-        Gizo.initialize(
-            this,
-            GizoApp.GizoAppOptions.Builder().build()
-        )
-    }
-}
-```
-{% endtab %}
-{% endtabs %}
-
-In the example above, we create a new instance of the Application class and call the initialize method to initialize the SDK.
-
-{% tabs %}
-{% tab title="Kotlin" %}
-```kotlin
-<application
-    android:name=".Application"
->
-```
-{% endtab %}
-{% endtabs %}
-
-In the example above, we add some lines of code to AndroidManifest.xml as well.
-
-**Note:** For using features of the SDK you need to add [Model ](broken-reference)and required [App Options Setting](broken-reference) in the following steps.
+4. We need to implement settings for Mapbox because we use it in our library, so add the following lines to settings.gradle too:
 

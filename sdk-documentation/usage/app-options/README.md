@@ -44,7 +44,7 @@ To set app options for the SDK, you will need to create a new instance of the Ap
 
         Gizo.initialize(
             this,
-            GizoApp.GizoAppOptions.Builder()
+            GizoAppOptions.Builder()
                 .debug(true)
                 .folderName("GizoSample")
                 .analysisSetting(GizoAnalysisSettings.Builder().build())

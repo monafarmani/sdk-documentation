@@ -18,7 +18,7 @@ layout:
 
 # GizoAnalysisSettings
 
-## overview
+## Overview
 
 In our SDK, we require accurate and efficient detection and localization of objects in images and video streams and also  accurate and efficient estimation of the depth or distance of objects in a scene.
 
@@ -59,14 +59,17 @@ class Application : Application() {
             GizoApp.GizoAppOptions.Builder()
                 .debug(true)
                 .folderName("GizoSample")
+                
+                 //add these lines
                 .analysisSetting(GizoAnalysisSettings.Builder()
-                
-                //add these lines
-                
                     .allow(true)
                     .modelName("arti_sense.tflite")
                     .loadDelegate(GizoAnalysisSettings.AnalysisDelegateType.Auto)
                     .carHeight(1.6)
+                    .collisionThreshold(0.5f)
+                    .ttcFileLocation(GizoFileLocationPath.CACHE)
+                    .ttcDataTimerPeriod(30L)
+                    .ttcDataTimerInitialDelay(0L)
                     .saveMatrixFile(true)
                     .saveTTcFile(true)
                     .build())
@@ -85,11 +88,26 @@ class Application : Application() {
 {% endtab %}
 {% endtabs %}
 
+The `GizoAnalysisSettings` builder sets the analysis-related properties such as:
+
+* <mark style="color:blue;">`allow`</mark>`(true)`: Enabling the analysis feature.
+* <mark style="color:blue;">`modelName`</mark>`("arti_sense.tflite")`: Providing the name of the model to be used for analysis.
+* <mark style="color:blue;">`loadDelegate`</mark>`(GizoAnalysisSettings.AnalysisDelegateType.Auto)`: Specifying the analysis delegate type as "Auto", which determines the best delegate based on the device capabilities.
+* <mark style="color:blue;">`carHeight`</mark>`(1.6)`: Setting the height of the car for analysis.
+* <mark style="color:blue;">`collisionThreshold`</mark>`(0.5f)`: Setting the collision threshold value for analysis.
+* <mark style="color:blue;">`ttcFileLocation`</mark>`(GizoFileLocationPath.CACHE)`: Specifying the file location path for storing Time-to-Collision (TTC) data (in this case, set to the cache directory).
+* <mark style="color:blue;">`ttcDataTimerPeriod`</mark>`(30L)`: Setting the period of the TTC data timer to 30 milliseconds.
+* <mark style="color:blue;">`ttcDataTimerInitialDelay`</mark>`(0L)`: Setting the initial delay of the TTC data timer to 0 milliseconds (no delay).
+* <mark style="color:blue;">`saveMatrixFile`</mark>`(true)`: Indicating that the analysis matrix file should be saved.
+* <mark style="color:blue;">`saveTTcFile`</mark>`(true)`: Indicating that the TTC data should be saved to a file.
+
+Finally, the `build()` method is called on the `GizoAppOptions.Builder()` instance to create a `GizoAppOptions` object with the configured analysis settings.
+
 
 
 &#x20;Here are the available options that can be set in analysisSetting in  the Application class:
 
-<table><thead><tr><th width="240.33333333333331">Options</th><th width="207">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>allow(Boolean)</td><td>false</td><td><p>To allow to use it or not.</p><p> </p></td></tr><tr><td>modelName(String)</td><td>""</td><td>A name that corresponds to this model's name.</td></tr><tr><td><p>loadDelegate</p><p>(AnalysisDelegateType)</p></td><td><p>AnalysisDelegateType</p><p>.Auto</p></td><td>To specify the processing method on the model e.g. CPU, GPU, NNAPI</td></tr><tr><td>carHeight(Double)</td><td>1.6</td><td>To specify the distance from the windshield to the hood of the car.</td></tr><tr><td>collisionThreshold(Float)</td><td>0.5f</td><td>The number that is used in the TTC calculations.</td></tr><tr><td>saveTTcFile(Boolean)</td><td>false</td><td>Should the file of TTC be saved in CSV format or not.</td></tr><tr><td><p>ttcFileLocation</p><p>(GizoFileLocationPath)</p></td><td><p>GizoFileLocationPath</p><p>.CACHE</p></td><td>Where the file should be saved, in the cache, or download.</td></tr><tr><td><p>ttcDataTimerPeriod</p><p>(Long)</p></td><td>30L</td><td>To specify in what period of time interval the data should be saved and sent.</td></tr><tr><td><p>ttcDataTimerInitialDelay</p><p>(Long)</p></td><td>0L</td><td>To specify the initial amount of timer </td></tr><tr><td><p>saveMatrixFile</p><p>(Boolean)</p></td><td>false</td><td>Should it save the matrix file that is created based on the camera resolution or not?</td></tr><tr><td><p>matrixFileLocation</p><p>(GizoFileLocationPath)</p></td><td><p>GizoFileLocationPath</p><p>.CACHE</p></td><td>Where to save matrix file.</td></tr></tbody></table>
+<table><thead><tr><th width="240.33333333333331">Options</th><th width="207">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>allow(Boolean)</td><td>false</td><td><p>To allow to use it or not.</p><p> </p></td></tr><tr><td>modelName(String)</td><td>""</td><td>A name that corresponds to this model's name.</td></tr><tr><td><p>loadDelegate</p><p>(AnalysisDelegateType)</p></td><td><p>AnalysisDelegateType</p><p>.Auto</p></td><td>To specify the processing method on the model e.g. CPU, GPU, NNAPI</td></tr><tr><td>carHeight(Double)</td><td>1.6</td><td>To specify the distance from the windshield to the hood of the car.</td></tr><tr><td>collisionThreshold(Float)</td><td>0.5f</td><td>The number that is used in the TTC calculations.</td></tr><tr><td>saveTTcFile(Boolean)</td><td>false</td><td>Should the file of TTC be saved in CSV format or not.</td></tr><tr><td><p>ttcFileLocation</p><p>(GizoFileLocationPath)</p></td><td><p>GizoFileLocationPath</p><p>.CACHE</p></td><td>Where the file should be saved, in this cache or download.</td></tr><tr><td><p>ttcDataTimerPeriod</p><p>(Long)</p></td><td>30L</td><td>To specify in what period of time interval the data should be saved and sent.</td></tr><tr><td><p>ttcDataTimerInitialDelay</p><p>(Long)</p></td><td>0L</td><td>To specify the initial amount of timer </td></tr><tr><td><p>saveMatrixFile</p><p>(Boolean)</p></td><td>false</td><td>Should it save the matrix file that is created based on the camera resolution or not?</td></tr><tr><td><p>matrixFileLocation</p><p>(GizoFileLocationPath)</p></td><td><p>GizoFileLocationPath</p><p>.CACHE</p></td><td>Where to save matrix file.</td></tr></tbody></table>
 
 
 
@@ -111,15 +129,19 @@ class Application : Application() {
             GizoApp.GizoAppOptions.Builder().build()
             .analysisSetting(GizoAnalysisSettings.Builder(
                 .allow(true)
-                .modelName("arti_sense.tflite")
-                .loadDelegate(GizoAnalysisSettings.AnalysisDelegateType.Auto)
-                .carHeight(1.6)
-                .saveMatrixFile(true)
+                    .modelName("arti_sense.tflite")
+                    .loadDelegate(GizoAnalysisSettings.AnalysisDelegateType.Auto)
+                    .carHeight(1.6)
+                    .collisionThreshold(0.5f)
+                    .ttcFileLocation(GizoFileLocationPath.CACHE)
+                    .ttcDataTimerPeriod(30L)
+                    .ttcDataTimerInitialDelay(0L)
+                    .saveMatrixFile(true)
                     .saveTTcFile(true)
                     .build())
         )
         Gizo.app.setLoadModelObserver { status ->
-            Log.d("LoadModelStatus", "status:" + status.name)
+            
         }
 
         Gizo.app.loadModel()

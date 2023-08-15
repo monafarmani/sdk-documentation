@@ -45,18 +45,18 @@ For this reason, add these lines of code in the Application class, onCreate func
 {% endtab %}
 {% endtabs %}
 
-The `GizoImuSetting` builder sets the IMU-related properties such as:
+The `GizoImuSetting` builder sets the IMU-related properties,such as:
 
 * <mark style="color:blue;">`allowLinearAccelerationSensor`</mark>`(true)`: Enabling the Linear Acceleration sensor.
 * <mark style="color:blue;">`allowGravitySensor`</mark>`(true)`: Enabling the Gravity sensor.
 * <mark style="color:blue;">`allowGyroscopeSensor`</mark>`(true)`: Enabling the Gyroscope sensor.
-* <mark style="color:blue;">`saveCsvFile`</mark>`(true)`: Indicating that the IMU data should be saved to a CSV file.
+* <mark style="color:blue;">`saveCsvFile`</mark>`(true)`: Indicating that the IMU data should be saved in a CSV file.
 * <mark style="color:blue;">`fileLocation`</mark>`(GizoFileLocationPath.CACHE)`: Specifying the file location path for storing the IMU data CSV file (in this case, set to the cache directory).
 * <mark style="color:blue;">`imuDataTimerPeriod`</mark>`(5000L)`: Setting the period of the IMU data timer to 5000 milliseconds (5 seconds).
 * <mark style="color:blue;">`imuDataTimerInitialDelay`</mark>`(0L)`: Setting the initial delay of the IMU data timer to 0 milliseconds (no delay).
 * <mark style="color:blue;">`saveDataDateTimeFormat`</mark>`("yyyy-MM-dd'T'HH-mm-ss-SSS'Z'")`: Specifying the date and time format for saving the IMU data file.
 
-Finally, the `build()` method is called on the `GizoAppOptions.Builder()` instance to create a `GizoAppOptions` object with the configured IMU settings.
+Finally, the `build()`method is called on the `GizoAppOptions.Builder()` instance to create a `GizoAppOptions` object with the configured IMU settings.
 
 This code suggests that the `GizoAppOptions` class specifies various configuration options for the `Gizo` application, including IMU-related settings. The specific implementation and usage of `GizoAppOptions` would depend on the details of the `Gizo` application itself.
 

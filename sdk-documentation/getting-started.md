@@ -141,7 +141,35 @@ Locate the toolbar at the top of the Android Studio window. There, you should se
 
 To initialize the SDK, you will need to create a new instance of the Application class in your app's module:
 
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+class Application : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        Gizo.initialize(
+            this,
+            GizoApp.GizoAppOptions.Builder().build()
+        )
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 In the example above, we create a new instance of the Application class and call the initialize method to initialize the SDK.
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+<application
+    android:name=".Application"
+>
+```
+{% endtab %}
+{% endtabs %}
 
 In the example above, we add some lines of code to AndroidManifest.xml as well.
 

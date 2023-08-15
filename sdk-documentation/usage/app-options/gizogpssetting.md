@@ -34,7 +34,7 @@ For this reason, add these lines of code in the Application class, onCreate func
  .gpsSetting(
        GizoGpsSetting.Builder()
        .allow(true)
-       .mapBoxKey("")
+       .mapBoxKey("MAPBOX_SECRET_KEY")
        .interval(1000L)
        .maxWaitTime(1000L)
        .withForegroundService(true)
@@ -51,7 +51,7 @@ For this reason, add these lines of code in the Application class, onCreate func
 The GizoGpsSetting builder sets the GPS-related properties, such as:
 
 * <mark style="color:blue;">allow</mark>(true): Enabling GPS.
-* <mark style="color:blue;">mapBoxKey</mark>(“pk.eyJ1IjoibXlwbHVzIiwiYSI6ImNsYmMwbHBiNzFrcTQzcHFwaGdjb3RvcHIifQ.ysTPIV-rjUzxoBT4x\_Zxww”): Providing the Mapbox API key for accessing Mapbox services.
+* <mark style="color:blue;">mapBoxKey</mark>(“MAPBOX\_SECRET\_KEY”): Providing the Mapbox API key for accessing Mapbox services.
 * interval(1000L): Setting the GPS update interval to 1000 milliseconds (1 second). &#x20;
 * <mark style="color:blue;">maxWaitTime</mark>(1000L): Setting the maximum wait time for GPS updates to 1000 milliseconds (1 second).&#x20;
 * &#x20;<mark style="color:blue;">withForegroundService</mark>(true): Indicating that the GPS service should run in the foreground.

@@ -87,7 +87,33 @@ dependencies {
 In Android Studio, the `build.gradle` file is a configuration file that is used to define various settings and dependencies for your Android project. It is located in the root directory of your project and each module within the project.
 
 4. We need to implement settings for Mapbox because we use it in our library, so add the following lines to settings.gradle too:
-5. Sync your project with Gradle.
+
+{% tabs %}
+{% tab title="First Tab" %}
+```kotlin
+allprojects {
+    repositories {
+      maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                username = "mapbox"
+                password = "MAPBOX_SECRET_KEY"
+            }
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+4. Sync your project with Gradle.
 
 Locate the toolbar at the top of the Android Studio window. There, you should see a series of icons, including a circular arrow icon labeled "Sync Project with Gradle Files."
 

@@ -34,7 +34,7 @@ For this reason, add these lines of code in the Application class, onCreate func
  .gpsSetting(
        GizoGpsSetting.Builder()
        .allow(true)
-       .mapBoxKey("pk.eyJ1IjoibXlwbHVzIiwiYSI6ImNsYmMwbHBiNzFrcTQzcHFwaGdjb3RvcHIifQ.ysTPIV-rjUzxoBT4x_Zxww")
+       .mapBoxKey("")
        .interval(1000L)
        .maxWaitTime(1000L)
        .withForegroundService(true)

@@ -109,11 +109,24 @@ allprojects {
 {% endtab %}
 
 {% tab title="Second Tab" %}
-
+```kotlin
+repositories {
+    maven {
+        url = uri("https://api.mapbox.com/downloads/v2/releases/maven")
+        authentication {
+            create<BasicAuthentication>("basic")
+        }
+        credentials {
+            username = "mapbox"
+            password = "MAPBOX_SECRET_KEY"
+        }
+    }
+}
+```
 {% endtab %}
 {% endtabs %}
 
-4. Sync your project with Gradle.
+5. Sync your project with Gradle
 
 Locate the toolbar at the top of the Android Studio window. There, you should see a series of icons, including a circular arrow icon labeled "Sync Project with Gradle Files."
 

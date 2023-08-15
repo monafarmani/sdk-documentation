@@ -51,4 +51,28 @@ The gizoAnalysis component likely represents a module or functionality within th
 
 Inside the lambda expression, the code block that would be executed when a change in the session status occurs is not provided in the given snippet. However, within this code block, you might find logic to handle the updated session status. For example, the application could perform actions based on whether the recording is in progress (isRecording) or if a preview is currently attached (previewAttached). This could involve updating the user interface, triggering specific behaviors, or performing other operations based on the current session status.
 
+
+
+### <mark style="color:purple;">Analysis listener</mark>
+
+In our SDK, we require accurate and efficient detection and localization of objects in images and video streams and also accurate and efficient estimation of the depth or distance of objects in a scene and we gain these data with Gizo Analysis Setting.
+
 **Note:** The purpose of this code is to calculate the Time to Collision (TTC) using the provided `depthPtn` and `speed` values. The calculated TTC is then returned as the result of the function call & can be used in the previous tab of the code.
+
+
+
+We can calculate the customized ttcStatus based on depthPtn, speed, collisionThreshold, and TTC in Preview too.
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.ttcStatusCalculator { ttc, speed, collisionThreshold, ttcStatus ->
+  ttcStatus
+}
+```
+{% endtab %}
+{% endtabs %}
+
+**Note:** The exact implementation of the `ttcStatusCalculator` function is not provided in the given snippet, but it is expected to perform the necessary calculations and logic to determine the TTC status based on the input parameters. The `ttcStatus` variable is likely updated within the function to reflect the calculated TTC status.
+
+After the `ttcStatus` is calculated, it is returned as the result of the function call & can be used in the previous tab of the code.

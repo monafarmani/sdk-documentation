@@ -126,7 +126,7 @@ repositories {
 {% endtab %}
 {% endtabs %}
 
-5. Sync your project with Gradle
+5. Sync your project with Gradle.
 
 Locate the toolbar at the top of the Android Studio window. There, you should see a series of icons, including a circular arrow icon labeled "Sync Project with Gradle Files."
 

@@ -67,7 +67,45 @@ Gain these parameters with the codes below in Preview:
 
 
 
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onAnalysisResult = { result, fps, ttc, ttcStatus,
+ttcDepthPtn, speed, gpsTime ->
+ 
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The gizoAnalysis property is responsible for analyzing data and processing results.
+
+The lambda expression assigned to the onAnalysisResult property takes several parameters: result, fps, ttc, ttcStatus, ttcDepthPtn, speed, and gpsTime. These parameters likely represent various analysis results and related information.
+
+Within this code block, you might find logic to handle the analysis results and utilize the provided information. This may mean showing the analysis result, changing the interface, saving the result for later, or taking actions based on the outcome...
+
+
+
+We can write a customized formula and calculate the TTC in Preview too.
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+<pre class="language-kotlin"><code class="lang-kotlin"><strong>Gizo.app.gizoAnalysis.ttcCalculator { depthPtn, speed, ttc ->
+</strong>    ttc
+}
+</code></pre>
+{% endtab %}
+{% endtabs %}
+
+**Note:** The purpose of this code is to calculate the Time to Collision (TTC) using the provided `depthPtn` and `speed` values. The calculated TTC is then returned as the result of the function call & can be used in the previous tab of the code.
+
+
+
 We can calculate the customized ttcStatus based on depthPtn, speed, collisionThreshold, and TTC in Preview too.
+
+
 
 {% tabs %}
 {% tab title="Kotlin" %}

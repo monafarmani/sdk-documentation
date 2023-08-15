@@ -12,6 +12,7 @@
       * [GizoImuSetting](sdk-documentation/usage/app-options/gizoimusetting.md)
       * [GizoVideoSetting](sdk-documentation/usage/app-options/gizovideosetting.md)
       * [GizoBatterySetting](sdk-documentation/usage/app-options/gizobatterysetting.md)
+    * [listeners](sdk-documentation/usage/listeners.md)
   * [📖 API Documentation](sdk-documentation/api-documentation.md)
   * [✏ Change Log](sdk-documentation/change-log.md)
   * [⚙ Configuration](sdk-documentation/configuration.md)

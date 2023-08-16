@@ -147,3 +147,92 @@ Within this code block, you might find logic to handle the updated location. For
 
 
 
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onSpeedChange = { speedLimitKph, speedKph ->
+    
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The `gizoAnalysis` object is likely a component responsible for analyzing and processing speed-related data. By assigning a lambda expression to the `onSpeedChange` property, the application can respond to changes in the device's speed.
+
+The lambda expression takes two parameters: `speedLimitKph` and `speedKph`. `speedLimitKph` represents the speed limit in kilometers per hour (KPH) that is applicable to the current location or context. `speedKph` represents the current speed of the device or vehicle in KPH.
+
+Inside the lambda expression, the code block that would be executed when a speed change is detected is not provided in the given snippet. However, within this code block, you might find logic to handle the updated speed. For example, the application could compare the current speed with the speed limit and trigger alerts or warnings if the speed exceeds the limit. The user interface could also be updated to display the updated speed information, providing real-time feedback to the user. Additionally, further calculations or analysis based on the speed data could be performed within this code block.
+
+
+
+### <mark style="color:purple;">IMU listener</mark>
+
+As previously mentioned, the IMU setting in MyTestSDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the accelerometer, gyroscope, and gravity.
+
+When IMU gets activated, these value parameters can be checked out:
+
+<table><thead><tr><th width="238">Value-parameters</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td>accelerationSensorEvent</td><td>SensorEvent?</td><td>includes information such as Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gyroscopeSensorEvent</td><td>SensorEvent?</td><td>includes information such as Angular velocity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gravitySensorEvent</td><td>SensorEvent?</td><td>includes information such as Gravity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>isAlign</td><td>Boolean</td><td>Whether the mobile device is in a landscape orientation or not.</td></tr></tbody></table>
+
+
+
+Gain these parameters with the codes below in Preview
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onLinearAccelerationSensor={ accelerationSensorEvent->
+   
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The gizoAnalysis object is likely a component responsible for analyzing and processing data from the linear acceleration sensor. Assigning a lambda expression to the onLinearAccelerationSensor property lets the application respond to events triggered by the linear acceleration sensor..
+
+The lambda expression uses accelerationSensorEvent as the input, which comes from the linear acceleration sensor. This event data typically includes information about the acceleration of the device along various axes, such as the X, Y, and Z axes.
+
+Within this code block, you might find logic to handle the received acceleration data. For example, the application could analyze the acceleration values to detect specific motion patterns, such as shaking or sudden movements. The user interface could be updated to provide real-time feedback based on the acceleration values, such as displaying animations or triggering sound effects. Additionally, the acceleration data could be used to trigger specific behaviors or calculations within the application.
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onGyroscopeSensor={ gyroscopeSensorEvent->
+  
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The `gizoAnalysis` object is likely a component responsible for analyzing and processing data from the gyroscope sensor. By assigning a lambda expression to the `onGyroscopeSensor` property, the application can respond to events triggered by the gyroscope sensor.
+
+The lambda expression takes a single parameter `gyroscopeSensorEvent`, which represents the event data received from the gyroscope sensor. This event data typically includes information about the device's rotational movement along different axes, such as the X, Y, and Z axes.
+
+Within this code block, you might find logic to handle the received gyroscope data. For example, the application could analyze the gyroscope values to detect specific types of rotation or gestures, such as tilting, shaking, or rotating the device. The user interface could be updated to reflect the device's orientation or movement, such as adjusting the display based on the device's tilt or triggering animations based on rotation. Additionally, the gyroscope data could be used to trigger specific behaviors or calculations within the application.
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onGravitySensor={ gravitySensorEvent->
+   
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The `gizoAnalysis` property is responsible for analyzing and processing data from various sensors, including the gravity sensor.
+
+The lambda expression assigned to the `onGravitySensor` property takes a single parameter `gravitySensorEvent`, which represents the event data received from the gravity sensor.
+
+Within this code block, you might find logic to handle the received gravity sensor data. For example, the application could analyze the gravity data to determine the device's orientation or position relative to gravity. This could be used to detect tilts or changes in orientation, allowing the application to respond accordingly. The gravity sensor data could also be used to update the user interface, trigger specific behaviors, or perform calculations based on the device's orientation.

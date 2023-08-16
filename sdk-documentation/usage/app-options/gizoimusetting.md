@@ -56,6 +56,10 @@ The `GizoImuSetting` builder sets the IMU-related properties,such as:
 * <mark style="color:blue;">`imuDataTimerInitialDelay`</mark>`(0L)`: Setting the initial delay of the IMU data timer to 0 milliseconds (no delay).
 * <mark style="color:blue;">`saveDataDateTimeFormat`</mark>`("yyyy-MM-dd'T'HH-mm-ss-SSS'Z'")`: Specifying the date and time format for saving the IMU data file.
 
+**Note:** saveDatadateTimeFormat will be changed if It's going to be used locally.&#x20;
+
+
+
 Finally, the `build()`method is called on the `GizoAppOptions.Builder()` instance to create a `GizoAppOptions` object with the configured IMU settings.
 
 This code suggests that the `GizoAppOptions` class specifies various configuration options for the `Gizo` application, including IMU-related settings. The specific implementation and usage of `GizoAppOptions` would depend on the details of the `Gizo` application itself.

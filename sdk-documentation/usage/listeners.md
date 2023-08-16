@@ -205,14 +205,6 @@ Gizo.app.gizoAnalysis.onGyroscopeSensor={ gyroscopeSensorEvent->
 {% endtab %}
 {% endtabs %}
 
-{% tabs %}
-{% tab title="Kotlin" %}
-```
-}
-```
-{% endtab %}
-{% endtabs %}
-
 The `gizoAnalysis` object is likely a component responsible for analyzing and processing data from the gyroscope sensor. By assigning a lambda expression to the `onGyroscopeSensor` property, the application can respond to events triggered by the gyroscope sensor.
 
 The lambda expression takes a single parameter `gyroscopeSensorEvent`, which represents the event data received from the gyroscope sensor. This event data typically includes information about the device's rotational movement along different axes, such as the X, Y, and Z axes.

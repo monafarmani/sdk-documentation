@@ -36,7 +36,7 @@ For this reason, add these lines of code in the Application class, onCreate func
           .allowGyroscopeSensor(true)
           .saveCsvFile(true)
           .fileLocation(GizoFileLocationPath.CACHE)
-          .imuDataTimerPeriod(5000L)
+          .imuDataTimerPeriod(10L)
           .imuDataTimerInitialDelay(0L)
           .saveDataDateTimeFormat("yyyy-MM-dd'T'HH-mm-ss-SSS'Z'")
           .build()

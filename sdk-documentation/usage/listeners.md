@@ -65,8 +65,6 @@ When Analysis gets activated, these value parameters can be checked out:
 
 Gain these parameters with the codes below in Preview:
 
-
-
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
@@ -88,8 +86,6 @@ Within this code block, you might find logic to handle the analysis results and 
 
 We can write a customized formula and calculate the TTC in Preview too.
 
-
-
 {% tabs %}
 {% tab title="Kotlin" %}
 <pre class="language-kotlin"><code class="lang-kotlin"><strong>Gizo.app.gizoAnalysis.ttcCalculator { depthPtn, speed, ttc ->
@@ -105,8 +101,6 @@ We can write a customized formula and calculate the TTC in Preview too.
 
 We can calculate the customized ttcStatus based on depthPtn, speed, collisionThreshold, and TTC in Preview too.
 
-
-
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
@@ -120,3 +114,36 @@ Gizo.app.gizoAnalysis.ttcStatusCalculator { ttc, speed, collisionThreshold, ttcS
 **Note:** The exact implementation of the `ttcStatusCalculator` function is not provided in the given snippet, but it is expected to perform the necessary calculations and logic to determine the TTC status based on the input parameters. The `ttcStatus` variable is likely updated within the function to reflect the calculated TTC status.
 
 After the `ttcStatus` is calculated, it is returned as the result of the function call & can be used in the previous tab of the code.
+
+
+
+### <mark style="color:purple;">GPS listener</mark>
+
+As mentioned earlier, this documentation provides instructions on enabling GPS, accessing location, speed limit, and speed.
+
+When GPS gets activated, these value parameters can be checked out:
+
+<table><thead><tr><th width="196">Value-parameters</th><th width="159">Type</th><th>Description</th></tr></thead><tbody><tr><td>location</td><td>Location?</td><td>The location of the user.</td></tr><tr><td>isGpsOn</td><td>Boolean?</td><td>To check whether GPS is on or not.</td></tr><tr><td>speedLimitKph</td><td>Int?</td><td>speed limit kilometer per hour</td></tr><tr><td>speedKph</td><td>Int</td><td>speed kilometer per hour</td></tr></tbody></table>
+
+
+
+Gain these parameters with the codes below in Preview
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onLocationChange = { location, isGpsOn ->
+   
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The gizoAnalysis object is likely a component responsible for analyzing and processing location data. By assigning a lambda expression to the onLocationChange property, the application can respond to changes in the device’s location.
+
+The lambda expression takes two parameters: location and isGpsOn. Location is the updated GPS info, including latitude, longitude, and other relevant details.. isGpsOn is a boolean parameter that indicates whether the GPS functionality is currently enabled on the device.
+
+Within this code block, you might find logic to handle the updated location. For example, the application could update the user interface to display the new location information, trigger specific processes or calculations based on the new location, or save the location data for future use.
+
+
+

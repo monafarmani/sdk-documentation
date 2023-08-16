@@ -59,7 +59,11 @@ The GizoGpsSetting builder sets the GPS-related properties, such as:
 * &#x20;<mark style="color:blue;">fileLocation</mark>(GizoFileLocationPath.CACHE): Specifying the file location path for storing the GPS data CSV file (in this case, set to the cache directory).
 * <mark style="color:blue;">savePeriod</mark>(10L): Setting the period of saving GPS data to 10 milliseconds.&#x20;
 * <mark style="color:blue;">saveInitialDelay</mark>(0L): Setting the initial delay of saving GPS data to 0 milliseconds (no delay).
-* <mark style="color:blue;">saveDateTimeFormat</mark>(“yyyy-MM-dd’T’HH-mm-ss-SSS’Z’”): Specifying the date and time format for saving the GPS data file.
+* <mark style="color:blue;">saveDateTimeFormat</mark>(“yyyy-MM-dd’T’HH-mm-ss-SSS’Z’”): Specifying the date and time format for saving the GPS data file.&#x20;
+
+**Note:** saveDateTimeFormat will be changed if It's going to be used locally.&#x20;
+
+
 
 Finally, the build() method is called on the GizoAppOptions.Builder() instance to create a GizoAppOptions object with the configured GPS settings.
 

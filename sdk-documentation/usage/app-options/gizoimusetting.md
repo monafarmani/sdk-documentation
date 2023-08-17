@@ -68,8 +68,8 @@ This code suggests that the `GizoAppOptions` class specifies various configurati
 
 
 
-* **Linear acceleration sensor:** It is part of the device's sensor array and is used to measure the linear acceleration of the device, excluding the influence of gravity.
-* **Gravity sensor:** It is part of the device's sensor array and is used to measure the gravitational force acting on the device.
+* &#x20;**Acceleration sensor:** It is part of the device's sensor array and is used to measure the linear acceleration of the device, excluding the influence of gravity.
+* **Magnetic sensor:** It is part of the device's sensor array and is used to measure the gravitational force acting on the device.
 * **Gyroscope sensor:** It is part of the device's sensor array and is used to measure the device's angular velocity or rotational motion. The gyroscope provides information about the device's orientation and rotation rate.
 
 

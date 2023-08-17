@@ -228,3 +228,92 @@ The `gizoAnalysis` property is responsible for analyzing and processing data fro
 The lambda expression assigned to the `onGravitySensor` property takes a single parameter `gravitySensorEvent`, which represents the event data received from the gravity sensor.
 
 Within this code block, you might find logic to handle the received gravity sensor data. For example, the application could analyze the gravity data to determine the device's orientation or position relative to gravity. This could be used to detect tilts or changes in orientation, allowing the application to respond accordingly. The gravity sensor data could also be used to update the user interface, trigger specific behaviors, or perform calculations based on the device's orientation.
+
+
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onImuSensor = { linearAccelerationEvent, gyroscopeEvent, gravityEvent ->
+
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The gizoAnalysis property is responsible for analyzing and processing data from various sensors, including the IMU sensor.
+
+The lambda expression assigned to the onImuSensor property takes three parameters: linearAccelerationEvent, gyroscopeEvent, and gravityEvent. These parameters represent the event data received from the linear acceleration sensor, gyroscope sensor, and gravity sensor, respectively.
+
+Within this code block, you might find logic to handle the received sensor data. For example, the application could combine linear acceleration, gyroscope, and gravity data to calculate various metrics related to the device’s motion, orientation, or position in three-dimensional space. This could be used to detect device tilt, rotation, or movements in different directions. The application could then respond accordingly, such as updating the user interface, triggering specific behaviors, or performing calculations based on the derived met
+
+
+
+In MyTestSDK, if our mobile device is in landscape orientation, the listener calls back true. (isAlign would be true)
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.checkGravityAlignment { isAlign ->
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Landscape screen orientation in mobile devices refers to a display mode where the screen is wider than it is tall, resembling the shape of a landscape. In this orientation, the device is typically held horizontally, with the longer edge of the screen parallel to the ground.
+
+When a mobile device is in landscape orientation, the user interface and content on the screen adjust accordingly to make optimal use of the wider space. This orientation is commonly used for activities that benefit from a wider viewing area, such as watching videos, playing games, or viewing wide documents or images.
+
+
+
+### <mark style="color:purple;">Video listener</mark>
+
+In mobile devices, the "video settings" typically refer to the configurable options and parameters that allow users to customize various aspects of video recording or playback. These settings can vary depending on the specific device, operating system, and camera capabilities.
+
+When the video gets activated, this value parameter can be checked out:
+
+<table><thead><tr><th width="179.33333333333331">Value-parameter</th><th width="181">Type</th><th>Description</th></tr></thead><tbody><tr><td>event</td><td>VideoRecordEvent</td><td>Used to report video recording events and status.</td></tr></tbody></table>
+
+
+
+Gain these parameters with the codes below in Preview
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+gizoAnalysis.onRecordingEvent { event ->
+ 
+}
+```
+{% endtab %}
+{% endtabs %}
+
+The `gizoAnalysis` component likely represents a module or functionality within the application that is responsible for managing recording-related operations.
+
+The lambda expression assigned to the `onRecordingEvent` property takes a single parameter, `event`, which represents the recording event that has occurred.
+
+Within this code block, you might find logic to handle different recording events and perform specific actions based on the event type. For example, the application could respond to events such as recording start, stop, pause, resume, or completion. This could involve updating the user interface, notifying the user, performing additional processing or analysis on the recorded data, or triggering other related operations.
+
+
+
+Here there is an example of a sample of using event in your app.
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+when (event) {
+    is VideoRecordEvent.Finalize -> {
+        if (event.hasError()) {
+            //Do something
+        }
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+When a recording event occurs, the code checks if the event is an instance of `VideoRecordEvent.Finalize` using the `is` keyword. If it matches, the code block within the corresponding branch is executed.
+
+Inside the `VideoRecordEvent. Finalize` branch, there is an additional check using the `hasError()` function. This function likely checks if the event contains any error information. If the event has an error, the code block within the `if` statement is executed. However, the actual implementation of what should be done when an error occurs is not provided in the given snippet, as it is commented as "//Do something". You would need to replace that comment with the appropriate code that handles the error, such as displaying an error message, logging the error, or taking any necessary corrective action.

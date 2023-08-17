@@ -54,7 +54,7 @@ The GizoGpsSetting builder sets the GPS-related properties, such as:
 * <mark style="color:blue;">mapBoxKey</mark>(“MAPBOX\_SECRET\_KEY”): Providing the Mapbox API key for accessing Mapbox services.
 * interval(1000L): Setting the GPS update interval to 1000 milliseconds (1 second). &#x20;
 * <mark style="color:blue;">maxWaitTime</mark>(1000L): Setting the maximum wait time for GPS updates to 1000 milliseconds (1 second).&#x20;
-* &#x20;<mark style="color:blue;">withForegroundService</mark>(true): Indicating that the GPS service should run in the foreground.
+* &#x20;<mark style="color:blue;">withForegroundService</mark>(true): By default, the Navigation SDK will run a foreground service to render location updates and notifications. But, you can customize the default behavior by setting [`withForegroundService`](https://docs.mapbox.com/android/navigation/guides/ui-components/notifications/#no-system-notifications) to `false` when starting the trip session to prevent a foreground service from being started.
 * &#x20;<mark style="color:blue;">saveCsvFile</mark>(true): Indicating that the GPS data should be saved to a CSV file.
 * &#x20;<mark style="color:blue;">fileLocation</mark>(GizoFileLocationPath.CACHE): Specifying the file location path for storing the GPS data CSV file (in this case, set to the cache directory).
 * <mark style="color:blue;">savePeriod</mark>(10L): Setting the period of saving GPS data to 10 milliseconds.&#x20;

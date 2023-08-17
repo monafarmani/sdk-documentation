@@ -45,14 +45,14 @@ For this reason, add these lines of code in the Application class, onCreate func
 {% endtab %}
 {% endtabs %}
 
-The `GizoImuSetting` builder sets the IMU-related properties,such as:
+The `GizoImuSetting` builder sets the IMU-related properties, such as:
 
 * <mark style="color:blue;">`allowLinearAccelerationSensor`</mark>`(true)`: Enabling the Linear Acceleration sensor.
 * <mark style="color:blue;">`allowGravitySensor`</mark>`(true)`: Enabling the Gravity sensor.
 * <mark style="color:blue;">`allowGyroscopeSensor`</mark>`(true)`: Enabling the Gyroscope sensor.
 * <mark style="color:blue;">`saveCsvFile`</mark>`(true)`: Indicating that the IMU data should be saved in a CSV file.
 * <mark style="color:blue;">`fileLocation`</mark>`(GizoFileLocationPath.CACHE)`: Specifying the file location path for storing the IMU data CSV file (in this case, set to the cache directory).
-* <mark style="color:blue;">`imuDataTimerPeriod`</mark>`(5000L)`: Setting the period of the IMU data timer to 5000 milliseconds (5 seconds).
+* <mark style="color:blue;">`imuDataTimerPeriod`</mark>`(10L)`: Setting the period of the IMU data timer to 10 milliseconds (0.01 seconds).
 * <mark style="color:blue;">`imuDataTimerInitialDelay`</mark>`(0L)`: Setting the initial delay of the IMU data timer to 0 milliseconds (no delay).
 * <mark style="color:blue;">`saveDataDateTimeFormat`</mark>`("yyyy-MM-dd'T'HH-mm-ss-SSS'Z'")`: Specifying the date and time format for saving the IMU data file.
 

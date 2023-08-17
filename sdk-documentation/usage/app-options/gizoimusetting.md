@@ -31,9 +31,10 @@ For this reason, add these lines of code in the Application class, onCreate func
 ```kotlin
   .imuSetting(
       GizoImuSetting.Builder()
-          .allowLinearAccelerationSensor(true)
-          .allowGravitySensor(true)
+          .allowAccelerationSensor(true)
+          .allowMagneticSensor(true)
           .allowGyroscopeSensor(true)
+          .useAccelerationRawType(true)
           .saveCsvFile(true)
           .fileLocation(GizoFileLocationPath.CACHE)
           .imuDataTimerPeriod(10L)

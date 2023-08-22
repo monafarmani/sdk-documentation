@@ -18,17 +18,17 @@ layout:
 
 # 🚀 Getting Started
 
-Welcome to MyTestSDK! This guide will help you get started with integrating and using our library in your Android projects.
+Welcome to Gizo SDK! This guide will help you get started with integrating and using our library in your Android projects.
 
 ## Introduction
 
-MyTestSDK is a powerful and versatile library that provides a great analysis of the way people drive their cars. MyTestSDK allows precise control over driving, monitoring intelligence, and issuing warnings for risk of accidents…
+Gizo SDK is a powerful and versatile library that provides a great analysis of the way people drive their cars. Gizo SDK allows precise control over driving, monitoring intelligence, and issuing warnings for risk of accidents…
 
 
 
 ## prerequisites
 
-Before you begin using MyTestSDK, make sure you have the following prerequisites installed and set up in your development environment:
+Before you begin using Gizo SDK, make sure you have the following prerequisites installed and set up in your development environment:
 
 * Install the latest version of the Android Studio.
 * Install Mapbox SDK for Android and get access token

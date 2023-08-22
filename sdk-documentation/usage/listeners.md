@@ -231,8 +231,6 @@ Within this code block, you might find logic to handle the received gravity sens
 
 
 
-
-
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
@@ -317,3 +315,35 @@ when (event) {
 When a recording event occurs, the code checks if the event is an instance of `VideoRecordEvent.Finalize` using the `is` keyword. If it matches, the code block within the corresponding branch is executed.
 
 Inside the `VideoRecordEvent. Finalize` branch, there is an additional check using the `hasError()` function. This function likely checks if the event contains any error information. If the event has an error, the code block within the `if` statement is executed. However, the actual implementation of what should be done when an error occurs is not provided in the given snippet, as it is commented as "//Do something". You would need to replace that comment with the appropriate code that handles the error, such as displaying an error message, logging the error, or taking any necessary corrective action.
+
+
+
+### <mark style="color:purple;">Battery listener</mark>
+
+Battery settings on the MyTestSDK library refer to the configuration and management options related to the device’s battery usage and performance. These settings allow users to monitor and control the battery usage of their mobile devices.
+
+When the battery gets activated, this value parameter can be checked out:
+
+<table><thead><tr><th width="184">Value-parameter</th><th width="142">Type</th><th>Description</th></tr></thead><tbody><tr><td>status</td><td>BatteryStatus</td><td>To check what is the battery status: LOW_BATTERY_STOP, LOW-BATTERY_WARNING, or NORMAL</td></tr></tbody></table>
+
+
+
+Gain this parameter with the codes below in Preview
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onBatteryStatusChange = { status ->
+ 
+ }
+```
+{% endtab %}
+{% endtabs %}
+
+The `gizoAnalysis` property is responsible for analyzing and processing various aspects of the application, including monitoring the battery status.
+
+The lambda expression assigned to the `onBatteryStatusChange` property takes a single parameter `status`, which represents the updated battery status.
+
+Inside the lambda expression, the code block that would be executed when a change in the battery status occurs is not provided in the given snippet. However, within this code block, you might find logic to handle the updated battery status. For example, the application could perform actions based on the current battery level, such as adjusting power consumption, displaying a low battery warning, or triggering specific behaviors when the battery reaches a certain threshold.

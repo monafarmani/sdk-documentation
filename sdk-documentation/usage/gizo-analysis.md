@@ -109,11 +109,13 @@ Gizo.app.gizoAnalysis.attachPreview(previewView)
 
 ##
 
-## Video Recording Options in Gizo SDK
+## Analysis Options in Gizo SDK
 
 In Android Studio, the Preview feature allows developers to visualize and interact with the user interface (UI) of their Android app without the need to run the app on a physical device or emulator. It provides a real-time preview of how the UI will look and behave on different devices and screen sizes.
 
 The Preview feature is primarily used in the XML layout editor, where developers design the UI of their app using XML markup or the visual drag-and-drop editor. With the Preview feature, developers can see a live rendering of the UI layout, including the arrangement of views, styles, themes, and other UI elements.
+
+
 
 ### <mark style="color:purple;">Lock Preview</mark>
 

@@ -50,4 +50,4 @@ Once the desired orientation settings are configured using the builder, the `bui
 
 Here is the available option that can be set in orientationSetting in the Application class:
 
-<table><thead><tr><th width="227">Options</th><th width="141.33333333333331">Default Value</th><th>Descriptions</th></tr></thead><tbody><tr><td><p>allowGravitySensor</p><p>(Boolean)</p></td><td>false</td><td>To activate gravity sensor or not.</td></tr></tbody></table>
+<table><thead><tr><th width="227">Options</th><th width="141.33333333333331">Default Value</th><th>Descriptions</th></tr></thead><tbody><tr><td><p>allowGravitySensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the gravity sensor or not.</td></tr></tbody></table>

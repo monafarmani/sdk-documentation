@@ -66,7 +66,7 @@ Based on the settings we have applied, some files related to video, analysis, GP
 
 Saving files in Android Studio has benefits like data persistence, offline accessibility, advanced analysis, sharing, backup, and tracking. It enhances the functionality, usability, and reliability of your app by ensuring the availability and integrity of important data.
 
-To start saving files using MyTestSDK, use the following code:
+To start saving files using Gizo SDK, use the following code:
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -81,7 +81,7 @@ To start saving files using MyTestSDK, use the following code:
 
 While saving files is an essential aspect of many applications, it’s important to consider the performance, battery, storage, security, and network implications associated with file-saving operations. By optimizing and managing file-saving processes, you can ensure a smooth user experience while efficiently utilizing system resources.
 
-To stop saving files using MyTestSDK, use the following code:
+To stop saving files using Gizo SDK, use the following code:
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -109,7 +109,7 @@ Gizo.app.gizoAnalysis.attachPreview(previewView)
 
 ##
 
-## Video Recording Options in MyTestSDK.
+## Video Recording Options in Gizo SDK
 
 In Android Studio, the Preview feature allows developers to visualize and interact with the user interface (UI) of their Android app without the need to run the app on a physical device or emulator. It provides a real-time preview of how the UI will look and behave on different devices and screen sizes.
 
@@ -123,7 +123,7 @@ Once the Lock Preview feature is enabled, the preview will remain fixed to the c
 
 By using the Lock Preview feature, developers can maintain a focused and consistent preview display, allowing for more efficient UI design and testing in Android Studio.
 
-To lock the preview using MyTestSDK, follow this line of code:
+To lock the preview using Gizo SDK, follow this line of code:
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -139,7 +139,7 @@ Gizo.app.gizoAnalysis.lockPreview()
 
 In Android Studio, the “Unlock Preview” feature is the counterpart to the “Lock Preview” feature in the XML layout editor’s Preview pane. When the Unlock Preview feature is enabled, it allows the preview display to dynamically update and adapt to changes made to the XML layout or other settings.
 
-To unlock the preview using MyTestSDK, follow this line of code:
+To unlock the preview using Gizo SDK, follow this line of code:
 
 {% tabs %}
 {% tab title="Kotlin" %}

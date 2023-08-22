@@ -41,7 +41,7 @@ Gain these parameters with the codes below in Preview
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kts
-gizoAnalysis.onSessionStatus = { isRecording, previewAttached ->
+gizoAnalysis.onSessionStatus = { inProgress, previewAttached ->
 }
 ```
 {% endtab %}
@@ -49,7 +49,7 @@ gizoAnalysis.onSessionStatus = { isRecording, previewAttached ->
 
 The gizoAnalysis component likely represents a module or functionality within the application responsible for managing sessions and their associated status.
 
-Inside the lambda expression, the code block that would be executed when a change in the session status occurs is not provided in the given snippet. However, within this code block, you might find logic to handle the updated session status. For example, the application could perform actions based on whether the recording is in progress (isRecording) or if a preview is currently attached (previewAttached). This could involve updating the user interface, triggering specific behaviors, or performing other operations based on the current session status.
+Inside the lambda expression, the code block that would be executed when a change in the session status occurs is not provided in the given snippet. However, within this code block, you might find logic to handle the updated session status. For example, the application could perform actions based on whether the recording is in progress (inProgress) or if a preview is currently attached (previewAttached). This could involve updating the user interface, triggering specific behaviors, or performing other operations based on the current session status.
 
 
 

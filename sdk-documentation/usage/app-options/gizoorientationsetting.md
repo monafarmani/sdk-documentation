@@ -22,7 +22,7 @@ layout:
 
 In MyTestSDK, the "orientation setting" refers to the configuration that determines how the user interface of an Android application is displayed in terms of screen orientation.
 
-Screen orientation refers to the orientation of the device's screen, which can be either portrait (vertical) or landscape (horizontal). In this part we are checking the orientation of the device's screen, which should be in a proper position which is landscape (horizontal) with 90 angle.
+Screen orientation refers to the orientation of the device's screen, which can be either portrait (vertical) or landscape (horizontal). In this part, we are checking the orientation of the device's screen, which should be in a proper position, landscape (horizontal) with a 90 angle.
 
 You can add these lines of code in the Application class, onCreate function, inside Gizo.initialize to set the Orientation Settings.
 
@@ -50,6 +50,6 @@ Once the desired orientation settings are configured using the builder, the `bui
 
 
 
-Here are the available option that can be set in orientationSetting in the Application class:
+Here is the available option that can be set in orientationSetting in the Application class:
 
 <table><thead><tr><th width="227">Options</th><th width="141.33333333333331">Default Value</th><th>Descriptions</th></tr></thead><tbody><tr><td><p>allowGravitySensor</p><p>(Boolean)</p></td><td>false</td><td>To activate gravity sensor or not.</td></tr></tbody></table>

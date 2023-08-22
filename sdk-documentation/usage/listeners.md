@@ -174,7 +174,7 @@ As previously mentioned, the IMU setting in Gizo SDK allows developers to utiliz
 
 When IMU gets activated, these value parameters can be checked out:
 
-<table><thead><tr><th width="238">Value-parameters</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td>accelerationSensorEvent</td><td>SensorEvent?</td><td>includes information such as Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gyroscopeSensorEvent</td><td>SensorEvent?</td><td>includes information such as Angular velocity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gravitySensorEvent</td><td>SensorEvent?</td><td>includes information such as Gravity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>isAlign</td><td>Boolean</td><td>Whether the mobile device is in a landscape orientation or not.</td></tr></tbody></table>
+<table><thead><tr><th width="238">Value-parameters</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td>accelerationSensorEvent</td><td>SensorEvent?</td><td>includes information such as Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gyroscopeSensorEvent</td><td>SensorEvent?</td><td>includes information such as Angular velocity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gravitySensorEvent</td><td>SensorEvent?</td><td>includes information such as Gravity values, timestamps &#x26; Accuracy, or precision.</td></tr></tbody></table>
 
 
 
@@ -338,7 +338,13 @@ Inside the lambda expression, the code block that would be executed when a chang
 
 Screen orientation refers to the orientation of the device's screen, which can be either portrait (vertical) or landscape (horizontal).&#x20;
 
-In Gizo SDK, if our mobile device is in landscape orientation with a 90 angle, the listener calls back true. (isAlign would be true)
+When orientation gets activated, these value parameter can be checked out:
+
+<table><thead><tr><th width="238">Value-parameters</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td>isAlign</td><td>Boolean</td><td>Whether the mobile device is in a landscape orientation or not.</td></tr></tbody></table>
+
+
+
+Gain the parameter with the codes below in Preview
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -348,6 +354,8 @@ Gizo.app.gizoAnalysis.checkGravityAlignment { isAlign ->
 ```
 {% endtab %}
 {% endtabs %}
+
+In Gizo SDK, if our mobile device is in landscape orientation with a 90 angle, the listener calls back true. (isAlign would be true)
 
 Landscape screen orientation in mobile devices refers to a display mode where the screen is wider than it is tall, resembling the shape of a landscape. In this orientation, the device is typically held horizontally, with the longer edge of the screen parallel to the ground.
 

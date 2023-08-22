@@ -38,13 +38,14 @@ To set app options for the SDK, you will need to create a new instance of the Ap
 
 {% tabs %}
 {% tab title="Kotlin" %}
-<pre class="language-kotlin"><code class="lang-kotlin"><strong>class Application : Application() {
-</strong>    override fun onCreate() {
+```kotlin
+class Application : Application() {
+    override fun onCreate() {
         super.onCreate()
 
         Gizo.initialize(
             this,
-            GizoAppOptions.Builder()
+            GizoApp.GizoAppOptions.Builder()
                 .debug(true)
                 .folderName("GizoSample")
                 .analysisSetting(GizoAnalysisSettings.Builder().build())
@@ -52,11 +53,12 @@ To set app options for the SDK, you will need to create a new instance of the Ap
                 .gpsSetting(GizoGpsSetting.Builder().build())
                 .videoSetting(GizoVideoSetting.Builder().build())
                 .batterySetting(GizoBatterySetting.Builder().build())
+                .orientationSetting(GizoOrientationSetting.Builder())
                 .build()
         )
     }
 }
-</code></pre>
+```
 {% endtab %}
 {% endtabs %}
 
@@ -68,12 +70,13 @@ In the example above, we initialize the SDK instance as before and then create a
 
 &#x20;Here are the available options that can be set in the Application class:
 
-<table><thead><tr><th width="224.33333333333331">Option</th><th width="143">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>debug(Boolean)</td><td>true</td><td>Set to enable debugging log feature.</td></tr><tr><td>folderName(String)</td><td>"Gizo"</td><td>Set to save files in a download folder with this name.</td></tr><tr><td><p>analysisSetting</p><p>(<a href="broken-reference">GizoAnalysisSettings</a>)</p></td><td>null</td><td>Set to activate analyzing model &#x26; main export of the SDK.</td></tr><tr><td><p>imuSetting</p><p>(<a href="broken-reference">GizoImuSetting</a>)</p></td><td>null</td><td>Set to activate some sensors, such as LinearAccelerationSensor , GyroscopeSensor &#x26; GravitySenso, and get callbacks.</td></tr><tr><td><p>gpsSetting</p><p>(<a href="broken-reference">GizoGpsSetting</a>)</p></td><td>null</td><td>Set to provide location information to use in speed limit.</td></tr><tr><td><p>videoSetting</p><p>(<a href="broken-reference">GizoVideoSetting</a>)</p></td><td>null</td><td>Set the video export.</td></tr><tr><td><p>batterySetting</p><p>(<a href="broken-reference">GizoBatterySetting</a>)</p></td><td>null</td><td>Set the required implementation when the battery is in different status.</td></tr></tbody></table>
+<table><thead><tr><th width="224.33333333333331">Option</th><th width="143">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>debug(Boolean)</td><td>true</td><td>Set to enable debugging log feature.</td></tr><tr><td>folderName(String)</td><td>"Gizo"</td><td>Set to save files in a download folder with this name.</td></tr><tr><td><p>analysisSetting</p><p>(<a href="broken-reference">GizoAnalysisSettings</a>)</p></td><td>null</td><td>Set to activate analyzing model &#x26; main export of the SDK.</td></tr><tr><td><p>imuSetting</p><p>(<a href="broken-reference">GizoImuSetting</a>)</p></td><td>null</td><td>Set to activate some sensors, such as LinearAccelerationSensor , GyroscopeSensor &#x26; GravitySenso, and get callbacks.</td></tr><tr><td><p>gpsSetting</p><p>(<a href="broken-reference">GizoGpsSetting</a>)</p></td><td>null</td><td>Set to provide location information to use in speed limit.</td></tr><tr><td><p>videoSetting</p><p>(<a href="broken-reference">GizoVideoSetting</a>)</p></td><td>null</td><td>Set the video export.</td></tr><tr><td><p>batterySetting</p><p>(<a href="broken-reference">GizoBatterySetting</a>)</p></td><td>null</td><td>Set the required implementation when the battery is in different status.</td></tr><tr><td><p>orientationSetting</p><p>(<a href="broken-reference">GizoOrientationSetting</a>)</p></td><td>null</td><td>Set to activate gravity sensor.</td></tr></tbody></table>
 
 
 
 * **GizoAnalysisSetting** allows developers to gain some data based on the image caught from the camera and get object detection & depth estimation.
-* **GizoImuSetting** allows developers to utilize the sensors that make up the device's IMU. The IMU typically consists of the **accelerometer**, **gyroscope,** and **gravity**.
+* **GizoImuSetting** allows developers to utilize the sensors that make up the device's IMU. The IMU typically consists of the **accelerometer**, **gyroscope,** and **Magnetic**.
 * **GizoGpsSetting** provides instructions on enabling GPS, accessing location, speed limit, and speed.
 * **GizoVideoSetting** refers to the configuration and utilization of video-related features and components within an Android application. Video settings typically involve tasks, such as capturing video from the device’s camera, playing video files, or streaming video content.
 * **GizoBatterySetting** refers to the configuration and management options related to the device's battery usage and performance. These settings allow users to monitor and control the battery usage of their mobile devices.
+* **GizoOrientationSetting** refers to checking the orientation of the device's screen, which should be in a proper position which is landscape (horizontal) with 90 angle.

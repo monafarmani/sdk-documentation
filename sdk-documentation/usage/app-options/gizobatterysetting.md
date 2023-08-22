@@ -20,7 +20,7 @@ layout:
 
 ## Overview
 
-&#x20;Battery settings on MyTestSDK library refer to the configuration and management options related to the device’s battery usage and performance. These settings allow users to monitor and control the battery usage of their mobile devices.
+&#x20;Battery settings on the Gizo SDK library refer to the configuration and management options related to the device’s battery usage and performance. These settings allow users to monitor and control the battery usage of their mobile devices.
 
 Gizo battery setting is used to customize some behavior and functionality of our library, including specifying the minimum percentage of battery charge that Analysis options can be implemented, The minimum percentage of battery charge that Recording video can be implemented, A loop of time for getting battery status in 1 second, and so on ...
 

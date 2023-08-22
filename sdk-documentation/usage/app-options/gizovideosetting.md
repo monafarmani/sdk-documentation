@@ -20,7 +20,7 @@ layout:
 
 ## Overview
 
-Video settings on MyTestSDK refer to the various options and configurations that allow users to control and customize the video recording and playback experience. These settings can be accessed through the camera or video app on your mobile device.
+Video settings on Gizo SDK refer to the various options and configurations that allow users to control and customize the video recording and playback experience. These settings can be accessed through the camera or video app on your mobile device.
 
 Gizo video setting is used to customize some behavior and functionality of our library, including specifying the quality of video capturing and where to save video files.
 

@@ -20,7 +20,7 @@ layout:
 
 ## Overview
 
-In MyTestSDK, the "orientation setting" refers to the configuration that determines how the user interface of an Android application is displayed in terms of screen orientation.
+In Gizo SDK, the "orientation setting" refers to the configuration that determines how the user interface of an Android application is displayed in terms of screen orientation.
 
 Screen orientation refers to the orientation of the device's screen, which can be either portrait (vertical) or landscape (horizontal). In this part, we are checking the orientation of the device's screen, which should be in a proper position, landscape (horizontal) with a 90 angle.
 

@@ -42,11 +42,9 @@ The `orientationSetting` builder sets the orientation-related property which is:
 
 * <mark style="color:blue;">`allowGravitySensor`</mark>`(true)`: Enabling the Gravity sensor.
 
-This sensor refers to an accelerometer sensor that provides measurements of both linear acceleration and the force of gravity acting on the device. It combines the data from the accelerometer sensor with information from other sensors such as the gyroscope and magnetometer to estimate the device's orientation in relation to the Earth's gravitational field.
-
-
-
 Once the desired orientation settings are configured using the builder, the `build()` method is called to create an instance of `GizoOrientationSetting` with the specified settings.
+
+* **Gravity sensor:** It refers to an accelerometer sensor that provides measurements of both linear acceleration and the force of gravity acting on the device. It combines the data from the accelerometer sensor with information from other sensors such as the gyroscope and magnetometer to estimate the device's orientation in relation to the Earth's gravitational field.
 
 
 

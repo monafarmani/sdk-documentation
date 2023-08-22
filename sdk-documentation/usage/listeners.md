@@ -248,24 +248,7 @@ The gizoAnalysis property is responsible for analyzing and processing data from 
 
 The lambda expression assigned to the onImuSensor property takes three parameters: linearAccelerationEvent, gyroscopeEvent, and gravityEvent. These parameters represent the event data received from the linear acceleration sensor, gyroscope sensor, and gravity sensor, respectively.
 
-Within this code block, you might find logic to handle the received sensor data. For example, the application could combine linear acceleration, gyroscope, and gravity data to calculate various metrics related to the device’s motion, orientation, or position in three-dimensional space. This could be used to detect device tilt, rotation, or movements in different directions. The application could then respond accordingly, such as updating the user interface, triggering specific behaviors, or performing calculations based on the derived met
-
-
-
-In Gizo SDK, if our mobile device is in landscape orientation, the listener calls back true. (isAlign would be true)
-
-{% tabs %}
-{% tab title="Kotlin" %}
-```kotlin
-Gizo.app.gizoAnalysis.checkGravityAlignment { isAlign ->
-}
-```
-{% endtab %}
-{% endtabs %}
-
-Landscape screen orientation in mobile devices refers to a display mode where the screen is wider than it is tall, resembling the shape of a landscape. In this orientation, the device is typically held horizontally, with the longer edge of the screen parallel to the ground.
-
-When a mobile device is in landscape orientation, the user interface and content on the screen adjust accordingly to make optimal use of the wider space. This orientation is commonly used for activities that benefit from a wider viewing area, such as watching videos, playing games, or viewing wide documents or images.
+Within this code block, you might find logic to handle the received sensor data. For example, the application could combine linear acceleration, gyroscope, and gravity data to calculate various metrics related to the device’s motion, orientation, or position in three-dimensional space. This could be used to detect device tilt, rotation, or movements in different directions. The application could then respond accordingly, such as updating the user interface, triggering specific behaviors, or performing calculations based on the derived met.
 
 
 

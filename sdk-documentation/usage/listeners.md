@@ -348,3 +348,24 @@ The `gizoAnalysis` property is responsible for analyzing and processing various 
 The lambda expression assigned to the `onBatteryStatusChange` property takes a single parameter `status`, which represents the updated battery status.
 
 Inside the lambda expression, the code block that would be executed when a change in the battery status occurs is not provided in the given snippet. However, within this code block, you might find logic to handle the updated battery status. For example, the application could perform actions based on the current battery level, such as adjusting power consumption, displaying a low battery warning, or triggering specific behaviors when the battery reaches a certain threshold.
+
+
+
+### <mark style="color:purple;">Orientation Listener</mark>
+
+Screen orientation refers to the orientation of the device's screen, which can be either portrait (vertical) or landscape (horizontal).&#x20;
+
+In Gizo SDK, if our mobile device is in landscape orientation with a 90 angle, the listener calls back true. (isAlign would be true)
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.checkGravityAlignment { isAlign ->
+}
+```
+{% endtab %}
+{% endtabs %}
+
+Landscape screen orientation in mobile devices refers to a display mode where the screen is wider than it is tall, resembling the shape of a landscape. In this orientation, the device is typically held horizontally, with the longer edge of the screen parallel to the ground.
+
+When a mobile device is in landscape orientation, the user interface and content on the screen adjust accordingly to make optimal use of the wider space. This orientation is commonly used for activities that benefit from a wider viewing area, such as watching videos, playing games, or viewing wide documents or images.

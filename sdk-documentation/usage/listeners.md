@@ -167,7 +167,7 @@ Inside the lambda expression, the code block that would be executed when a speed
 
 ### <mark style="color:purple;">IMU listener</mark>
 
-As previously mentioned, the IMU setting in MyTestSDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the accelerometer, gyroscope, and gravity.
+As previously mentioned, the IMU setting in Gizo SDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the accelerometer, gyroscope, and gravity.
 
 When IMU gets activated, these value parameters can be checked out:
 
@@ -249,7 +249,7 @@ Within this code block, you might find logic to handle the received sensor data.
 
 
 
-In MyTestSDK, if our mobile device is in landscape orientation, the listener calls back true. (isAlign would be true)
+In Gizo SDK, if our mobile device is in landscape orientation, the listener calls back true. (isAlign would be true)
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -320,7 +320,7 @@ Inside the `VideoRecordEvent. Finalize` branch, there is an additional check usi
 
 ### <mark style="color:purple;">Battery listener</mark>
 
-Battery settings on the MyTestSDK library refer to the configuration and management options related to the device’s battery usage and performance. These settings allow users to monitor and control the battery usage of their mobile devices.
+Battery settings on the Gizo SDK library refer to the configuration and management options related to the device’s battery usage and performance. These settings allow users to monitor and control the battery usage of their mobile devices.
 
 When the battery gets activated, this value parameter can be checked out:
 

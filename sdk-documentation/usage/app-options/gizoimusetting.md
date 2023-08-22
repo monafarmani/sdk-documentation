@@ -20,7 +20,7 @@ layout:
 
 ## Overview
 
-The IMU setting in MyTestSDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the **accelerometer**, **gyroscope,** and **magnetometer**.
+The IMU setting in Gizo SDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the **accelerometer**, **gyroscope,** and **magnetometer**.
 
 Gizo IMU setting is used to customize some behavior and functionality of our library including specifying where to save IMU files, the period of time that an IMU data row is saved in a CSV file, the initial delay to save IMU data, the format to save date time and so on...
 
@@ -68,7 +68,7 @@ This code suggests that the `GizoAppOptions` class specifies various configurati
 
 
 
-* &#x20;**Accelerometer:** It is a sensor commonly found in mobile devices that measures acceleration forces acting on the device in three dimensions: along the x-axis (horizontal), y-axis (vertical), and z-axis (perpendicular to the device's screen). It detects changes in velocity and movement, allowing the device to respond to various types of motion.
+* **Accelerometer:** It is a sensor commonly found in mobile devices that measures acceleration forces acting on the device in three dimensions: along the x-axis (horizontal), y-axis (vertical), and z-axis (perpendicular to the device's screen). It detects changes in velocity and movement, allowing the device to respond to various types of motion.
 * **Linear acceleration sensor:** It is part of the device's sensor array and is used to measure the linear acceleration of the device, excluding the influence of gravity.
 * **Magnetic sensor:** It is a sensor that measures the strength and direction of the magnetic field in its vicinity. It is typically used to detect the presence of a magnetic field and determine its orientation.
 * **Gyroscope sensor:** It is part of the device's sensor array and is used to measure the device's angular velocity or rotational motion. The gyroscope provides information about the device's orientation and rotation rate.

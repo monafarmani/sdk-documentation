@@ -16,7 +16,7 @@ layout:
     visible: true
 ---
 
-# GizoAnalysisSettings
+# GizoAnalysisSetting
 
 ## Overview
 
@@ -67,7 +67,7 @@ class Application : Application() {
                     .loadDelegate(AnalysisDelegateType.Auto)
                     .collisionThreshold(0.5f)
                     .tailgatingThreshold(1.0f)
-                    .saveTTcCsvFile(true)
+                    .saveTtcCsvFile(true)
                     .ttcFileLocation(FileLocationPath.CACHE)
                     .saveDataTimerPeriod(30L)
                     .saveDataTimerInitialDelay(0L)
@@ -115,7 +115,7 @@ Finally, the `build()` method is called on the `GizoAppOptions.Builder()` instan
 
 &#x20;Here are the available options that can be set in analysisSetting in the Application class:
 
-<table><thead><tr><th width="240.33333333333331">Options</th><th width="207">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>allow(Boolean)</td><td>false</td><td><p>To allow to use it or not.</p><p> </p></td></tr><tr><td>modelName(String)</td><td>""</td><td>A name that corresponds to this model's name.</td></tr><tr><td><p>loadDelegate</p><p>(AnalysisDelegateType)</p></td><td><p>AnalysisDelegateType</p><p>.Auto</p></td><td>To specify the processing method on the model e.g. CPU, GPU, NNAPI</td></tr><tr><td><p>collisionThreshold</p><p>(Float or ThresholdType)</p></td><td>0.5f</td><td>The number that is used in the TTC calculations collision.</td></tr><tr><td><p>tailgatingThreshold</p><p>(Float or ThresholdType)</p></td><td>1.0f</td><td>The number that is used in the TTC calculations tailgating.</td></tr><tr><td>saveTTcFile(Boolean)</td><td>false</td><td>Should the file of TTC be saved in CSV format or not.</td></tr><tr><td><p>ttcFileLocation</p><p>(FileLocationPath)</p></td><td><p>FileLocationPath</p><p>.CACHE</p></td><td>Where the file should be saved, in this cache or download.</td></tr><tr><td><p>ttcDataTimerPeriod</p><p>(Long)</p></td><td>30L</td><td>To specify in what period of time interval the data should be saved and sent.</td></tr><tr><td><p>ttcDataTimerInitialDelay</p><p>(Long)</p></td><td>0L</td><td>To specify the initial amount of timer </td></tr><tr><td><p>saveMatrixFile</p><p>(Boolean)</p></td><td>false</td><td>Should it save the matrix file that is created based on the camera resolution or not?</td></tr><tr><td><p>matrixFileLocation</p><p>(FileLocationPath)</p></td><td><p>FileLocationPath</p><p>.CACHE</p></td><td>Where to save matrix file.</td></tr></tbody></table>
+<table><thead><tr><th width="240.33333333333331">Options</th><th width="207">Default Value</th><th>Description</th></tr></thead><tbody><tr><td>allow(Boolean)</td><td>false</td><td><p>To allow to use it or not.</p><p> </p></td></tr><tr><td>modelName(String)</td><td>""</td><td>A name that corresponds to this model's name.</td></tr><tr><td><p>loadDelegate</p><p>(AnalysisDelegateType)</p></td><td><p>AnalysisDelegateType</p><p>.Auto</p></td><td>To specify the processing method on the model e.g. CPU, GPU, NNAPI</td></tr><tr><td><p>collisionThreshold</p><p>(Float or ThresholdType)</p></td><td>0.5f</td><td>The number that is used in the TTC calculations collision.</td></tr><tr><td><p>tailgatingThreshold</p><p>(Float or ThresholdType)</p></td><td>1.0f</td><td>The number that is used in the TTC calculations tailgating.</td></tr><tr><td>saveTtcCsvFile(Boolean)</td><td>false</td><td>Should the file of TTC be saved in CSV format or not.</td></tr><tr><td><p>ttcFileLocation</p><p>(FileLocationPath)</p></td><td><p>FileLocationPath</p><p>.CACHE</p></td><td>Where the file should be saved, in this cache or download.</td></tr><tr><td><p>ttcDataTimerPeriod</p><p>(Long)</p></td><td>30L</td><td>To specify in what period of time interval the data should be saved and sent.</td></tr><tr><td><p>ttcDataTimerInitialDelay</p><p>(Long)</p></td><td>0L</td><td>To specify the initial amount of timer </td></tr><tr><td><p>saveMatrixFile</p><p>(Boolean)</p></td><td>false</td><td>Should it save the matrix file that is created based on the camera resolution or not?</td></tr><tr><td><p>matrixFileLocation</p><p>(FileLocationPath)</p></td><td><p>FileLocationPath</p><p>.CACHE</p></td><td>Where to save matrix file.</td></tr></tbody></table>
 
 ###
 
@@ -135,17 +135,18 @@ class Application : Application() {
         Gizo.initialize(
             this,
             GizoApp.GizoAppOptions.Builder().build()
-            .analysisSetting(GizoAnalysisSettings.Builder(
-                .allow(true)
-                    .modelName("arti_sense.tflite")
-                    .loadDelegate(GizoAnalysisSettings.AnalysisDelegateType.Auto)
-                    .carHeight(1.6)
+              .analysisSetting(GizoAnalysisSettings.Builder()
+                    .allowAnalysis(true)
+                    .modelName("arti_sense.data")
+                    .loadDelegate(AnalysisDelegateType.Auto)
                     .collisionThreshold(0.5f)
+                    .tailgatingThreshold(1.0f)
+                    .saveTtcCsvFile(true)
                     .ttcFileLocation(FileLocationPath.CACHE)
-                    .ttcDataTimerPeriod(30L)
-                    .ttcDataTimerInitialDelay(0L)
+                    .saveDataTimerPeriod(30L)
+                    .saveDataTimerInitialDelay(0L)
                     .saveMatrixFile(true)
-                    .saveTTcFile(true)
+                    .matrixFileLocation(FileLocationPath.CACHE)
                     .build())
         )
         Gizo.app.setLoadModelObserver { status ->

@@ -7,7 +7,7 @@
     * [Gizo Analysis](sdk-documentation/usage/gizo-analysis.md)
     * [Permissions](sdk-documentation/usage/permissions.md)
     * [App Options](sdk-documentation/usage/app-options/README.md)
-      * [GizoAnalysisSettings](sdk-documentation/usage/app-options/gizoanalysissettings.md)
+      * [GizoAnalysisSetting](sdk-documentation/usage/app-options/gizoanalysissetting.md)
       * [GizoGpsSetting](sdk-documentation/usage/app-options/gizogpssetting.md)
       * [GizoImuSetting](sdk-documentation/usage/app-options/gizoimusetting.md)
       * [GizoVideoSetting](sdk-documentation/usage/app-options/gizovideosetting.md)

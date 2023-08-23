@@ -36,7 +36,7 @@ The following permissions are required by the SDK:
 
 ## <mark style="color:purple;">Permissions Helper</mark>&#x20;
 
-So far, these permissions have been added to the manifest, but we need to add other helper permissions based on the settings we have made.
+So far, some permissions have been added to the manifest, but we need to add other helper permissions based on the settings we have made.
 
 To do this, these lines of code should be added to an activity
 
@@ -55,11 +55,11 @@ The line of code above gives us an array of strings that includes the required p
 ## Why Permissions Helper
 
 * If we grant access to AnalysisSettings, we will also have access to the camera
-* If the matrix file or TTC file is downloaded, it allows to have external access too.
+* If the matrix file or TTC file is downloaded, it allows us to have external access too.
 * If we have access to GPS settings, permissions of ACCESS\_COARSE\_LOCATION & ACCESS\_FINE\_LOCATION will be provided.&#x20;
-* If the GPS setting file is downloaded, it allows to have external access too.
-* If the IMU setting file is downloaded, it allows to have external access too.
-* If the video  setting file is downloaded, it allows to have external access too.
+* If the GPS setting file is downloaded, it allows us to have external access too.
+* If the IMU setting file is downloaded, it allows us to have external access too.
+* If the video setting file is downloaded, it allows us to have external access too.
 * If we need external access and the SDK version is not higher than 29, permissions WRITE\_EXTERNAL\_STORAGE & READ\_EXTERNAL\_STORAGE will be available.&#x20;
 
 

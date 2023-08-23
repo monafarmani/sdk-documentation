@@ -39,7 +39,7 @@ To have access to video setting options, you need to add these lines of code in 
 {% endtab %}
 {% endtabs %}
 
-The `GizoVideoSetting` builder sets the video-related properties such as `quality` (setting the video quality to the lowest available quality), and `fileLocation` (specifying the file location path for storing the video files, in this case, set to the cache directory).
+The `GizoVideoSetting` builder sets the video-related properties such as `quality` (setting the video quality to HD quality), and `fileLocation` (specifying the file location path for storing the video files, in this case, set to the cache directory).
 
 Finally, the `build()` method is called on the `GizoAppOptions.Builder()` instance to create a `GizoAppOptions` object with the configured video settings.
 

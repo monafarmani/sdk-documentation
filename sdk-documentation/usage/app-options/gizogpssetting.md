@@ -48,7 +48,7 @@ For this reason, add these lines of code in the Application class, onCreate func
 {% endtab %}
 {% endtabs %}
 
-The `GizoGpsSetting` builder sets the GPS-related properties such as:
+The `GizoGpsSetting` builder sets the GPS-related properties such as
 
 * <mark style="color:blue;">`allowGps`</mark>`(true)`: Enabling GPS.
 * <mark style="color:blue;">`mapBoxKey`</mark>`("pk.eyJ1IjoibXlwbHVzIiwiYSI6ImNsYmMwbHBiNzFrcTQzcHFwaGdjb3RvcHIifQ.ysTPIV-rjUzxoBT4x_Zxww")`: Providing the Mapbox API key for accessing Mapbox services.

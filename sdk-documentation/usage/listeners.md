@@ -59,7 +59,7 @@ In our SDK, we require accurate and efficient detection and localization of obje
 
 When Analysis gets activated, these value parameters can be checked out:
 
-<table><thead><tr><th width="203">Value-Parameters</th><th width="145">Type</th><th>Description</th></tr></thead><tbody><tr><td>preview</td><td>Bitmap?</td><td>It outputs an image that includes object detection &#x26; road lines.</td></tr><tr><td>ttc</td><td>Float?</td><td>Time to collision.</td></tr><tr><td>ttcStatus</td><td>TTCAlert</td><td>It returns state <strong>collision</strong>, <strong>tailgating</strong>, and <strong>None</strong> based on the calculated formula in the TTC.</td></tr><tr><td>frontObject</td><td>String</td><td>The distance to the front car.</td></tr><tr><td>speed</td><td>Float?</td><td>The speed of the car the user is driving in.</td></tr><tr><td>gpsTime</td><td>String</td><td>The current time.</td></tr></tbody></table>
+<table><thead><tr><th width="203">Value-Parameters</th><th width="145">Type</th><th>Description</th></tr></thead><tbody><tr><td>preview</td><td>Bitmap?</td><td>It outputs an image that includes object detection &#x26; road lines.</td></tr><tr><td>ttc</td><td>Float?</td><td>Time to collision.</td></tr><tr><td>ttcStatus</td><td>TTCAlert</td><td>It returns state <strong>collision</strong>, <strong>tailgating</strong>, and <strong>None</strong> based on the calculated formula in the TTC.</td></tr><tr><td>frontObject</td><td>String</td><td>The distance to the front object.</td></tr><tr><td>speed</td><td>Float?</td><td>The speed of the car the user is driving in.</td></tr><tr><td>gpsTime</td><td>String</td><td>The current time.</td></tr></tbody></table>
 
 
 
@@ -170,11 +170,11 @@ Inside the lambda expression, the code block that would be executed when a speed
 
 ### <mark style="color:purple;">IMU listener</mark>
 
-As previously mentioned, the IMU setting in Gizo SDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the accelerometer, gyroscope, and gravity.
+As previously mentioned, the IMU setting in Gizo SDK  allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the accelerometer, gyroscope, and gravity.
 
 When IMU gets activated, these value parameters can be checked out:
 
-<table><thead><tr><th width="238">Value-parameters</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td>accelerationSensorEvent</td><td>SensorEvent?</td><td>includes information such as Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gyroscopeSensorEvent</td><td>SensorEvent?</td><td>includes information such as Angular velocity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gravitySensorEvent</td><td>SensorEvent?</td><td>includes information such as Gravity values, timestamps &#x26; Accuracy, or precision.</td></tr></tbody></table>
+<table><thead><tr><th width="238">Value-parameters</th><th width="152">Type</th><th>Description</th></tr></thead><tbody><tr><td>linearSensorEvent</td><td>SensorEvent?</td><td>includes information such as Linear Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>accelerationSensorEvent</td><td>SensorEvent?</td><td>includes information such as Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>uncalibratedSensorEvent</td><td>SensorEvent?</td><td>includes information such as Uncalibrated Acceleration values, Timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gyroscopeSensorEvent</td><td>SensorEvent?</td><td>includes information such as Angular velocity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>gravitySensorEvent</td><td>SensorEvent?</td><td>includes information such as Gravity values, timestamps &#x26; Accuracy, or precision.</td></tr><tr><td>magneticSensorEvent</td><td>SensorEvent?</td><td>includes information such as Magnetic field values, timestamps &#x26; Accuracy, or precision.</td></tr></tbody></table>
 
 
 
@@ -183,16 +183,16 @@ Gain these parameters with the codes below in Preview
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-Gizo.app.gizoAnalysis.onLinearAccelerationSensor={ accelerationSensorEvent->
+Gizo.app.gizoAnalysis.onLinearAccelerationSensor={ linearSensorEvent->
    
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-The gizoAnalysis object is likely a component responsible for analyzing and processing data from the linear acceleration sensor. Assigning a lambda expression to the onLinearAccelerationSensor property lets the application respond to events triggered by the linear acceleration sensor..
+The gizoAnalysis object is likely a component responsible for analyzing and processing data from the linear acceleration sensor. Assigning a lambda expression to the onLinearAccelerationSensor property lets the application respond to events triggered by the linear acceleration sensor.
 
-The lambda expression uses accelerationSensorEvent as the input, which comes from the linear acceleration sensor. This event data typically includes information about the acceleration of the device along various axes, such as the X, Y, and Z axes.
+The lambda expression uses linearSensorEvent as the input, which comes from the linear acceleration sensor. This event data typically includes information about the acceleration of the device along various axes, such as the X, Y, and Z axes.
 
 Within this code block, you might find logic to handle the received acceleration data. For example, the application could analyze the acceleration values to detect specific motion patterns, such as shaking or sudden movements. The user interface could be updated to provide real-time feedback based on the acceleration values, such as displaying animations or triggering sound effects. Additionally, the acceleration data could be used to trigger specific behaviors or calculations within the application.
 
@@ -201,7 +201,39 @@ Within this code block, you might find logic to handle the received acceleration
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-Gizo.app.gizoAnalysis.onGyroscopeSensor={ gyroscopeSensorEvent->
+Gizo.app.gizoAnalysis.onAccelerationSensor= { accelerationSensorEvent->
+  
+}
+```
+{% endtab %}
+{% endtabs %}
+
+This code suggests that the `Gizo` namespace contains an object `gizoAnalysis` which has a property `onAccelerationSensor`. This property is being assigned a lambda expression or callback function.
+
+The lambda expression takes one parameter `accelerationSensorEvent`, which likely represents an event or data related to the acceleration sensor.
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+izo.app.gizoAnalysis.onAccelerationUncalibratedSensor= { uncalibratedSensorEvent->
+  
+}
+```
+{% endtab %}
+{% endtabs %}
+
+This code suggests that the `Gizo` namespace contains an object `gizoAnalysis` which has a property `onAccelerationUncalibratedSensor`. This property is being assigned a lambda expression or callback function.
+
+The lambda expression takes one parameter `uncalibratedSensorEvent`, which likely represents an event or data related to the uncalibrated acceleration sensor. The uncalibrated sensor data typically includes both raw and calibrated acceleration values.
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+izo.app.gizoAnalysis.onGyroscopeSensor={ gyroscopeSensorEvent->
   
 }
 ```
@@ -219,7 +251,7 @@ Within this code block, you might find logic to handle the received gyroscope da
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-Gizo.app.gizoAnalysis.onGravitySensor={ gravitySensorEvent->
+zo.app.gizoAnalysis.onGravitySensor={ gravitySensorEvent->
    
 }
 ```
@@ -237,7 +269,24 @@ Within this code block, you might find logic to handle the received gravity sens
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-Gizo.app.gizoAnalysis.onImuSensor = { linearAccelerationEvent, gyroscopeEvent, gravityEvent ->
+Gizo.app.gizoAnalysis.onMagneticSensor={ magneticSensorEvent->
+   
+}
+```
+{% endtab %}
+{% endtabs %}
+
+This code suggests that the `Gizo` namespace contains an object `gizoAnalysis` which has a property `onMagneticSensor`. This property is being assigned a lambda expression or callback function.
+
+The lambda expression takes one parameter `magneticSensorEvent`, which likely represents an event or data related to the magnetic sensor. The magnetic sensor data typically includes information about the magnetic field strength and direction.
+
+
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+Gizo.app.gizoAnalysis.onImuSensor = { accelerationEvent, linearAccelerationEvent,
+accelerationUncalibratedEvent, gyroscopeEvent, magneticEvent, gravityEvent ->
 
 }
 ```
@@ -246,9 +295,9 @@ Gizo.app.gizoAnalysis.onImuSensor = { linearAccelerationEvent, gyroscopeEvent, g
 
 The gizoAnalysis property is responsible for analyzing and processing data from various sensors, including the IMU sensor.
 
-The lambda expression assigned to the onImuSensor property takes three parameters: linearAccelerationEvent, gyroscopeEvent, and gravityEvent. These parameters represent the event data received from the linear acceleration sensor, gyroscope sensor, and gravity sensor, respectively.
+The lambda expression assigned to the onImuSensor property takes six parameters: accelerationEvent, linearAccelerationEvent, accelerationUncalibratedEvent, gyroscopeEvent, magneticEvent, and gravityEvent. These parameters represent the event data received from the acceleration sensor, linear acceleration sensor, uncalibrated acceleration sensor, gyroscope sensor, magnetic sensor, and gravity sensor, respectively.
 
-Within this code block, you might find logic to handle the received sensor data. For example, the application could combine linear acceleration, gyroscope, and gravity data to calculate various metrics related to the device’s motion, orientation, or position in three-dimensional space. This could be used to detect device tilt, rotation, or movements in different directions. The application could then respond accordingly, such as updating the user interface, triggering specific behaviors, or performing calculations based on the derived met.
+Within this code block, you might find logic to handle the received sensor data. For example, the application could combine different parameters' data to calculate various metrics related to the device’s motion, orientation, or position in three-dimensional space. This could be used to detect device tilt, rotation, or movements in different directions. The application could then respond accordingly, such as updating the user interface, triggering specific behaviors, or performing calculations based on the derived met.
 
 
 

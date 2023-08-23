@@ -123,7 +123,7 @@ Finally, the `build()` method is called on the `GizoAppOptions.Builder()` instan
 
 Loading a model in Android Studio allows the application to utilize the trained model's intelligence and perform complex tasks that go beyond traditional programming capabilities. By incorporating machine learning models into Android applications, developers can provide intelligent, data-driven features and functionalities to their users.
 
-Add these lines of code in Application class to load the model and receive the listener for different status of loading, such as LOADING, LOADED, FAILED, NOT\_LOADED
+Add these lines of code in the Application class to load the model and receive the listener for different stats of loading, such as LOADING, LOADED, FAILED, NOT\_LOADED.
 
 {% tabs %}
 {% tab title="Kotlin" %}

@@ -175,5 +175,5 @@ In the example above, we add some lines of code to AndroidManifest.xml as well.
 
 In the AndroidManifest.xml file, the `<application>` element is used to define the characteristics and configurations of your Android application. The `android:name` attribute within the `<application>` element specifies the name of the class that represents the application itself.
 
-**Note:** For using features of the SDK you need to add Model and required App Options Setting in the following steps.
+<mark style="color:red;">**Note:**</mark> For using features of the SDK you need to add Model and required App Options Setting in the following steps.
 

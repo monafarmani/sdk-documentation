@@ -398,7 +398,7 @@ Gain the parameter with the codes below in Preview
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-Gizo.app.gizoAnalysis.checkGravityAlignment { isAlign ->
+Gizo.app.gizoAnalysis.onGravityAlignmentChange{ isAlign ->
 }
 ```
 {% endtab %}

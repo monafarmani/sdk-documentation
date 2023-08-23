@@ -26,7 +26,7 @@ In this library, using artificial intelligence, driving behavior is analyzed, an
 
 ### <mark style="color:purple;">Start Gizo Analysis</mark>
 
-To start using the SDK, we need to start Gizo Analysis. For this reason, we need a lifecycle like an activity or a fragment and implement these lines of code in the Activity.
+To start using the SDK, we need to start Gizo Analysis. For this reason, we need a lifecycle like an activity or a fragment and implement some lines of code in the Activity.
 
 Android components go through a series of states called the lifecycle. The Android framework provides a set of predefined methods that allow developers to perform specific actions or respond to events at different stages of the component’s lifecycle.
 
@@ -95,7 +95,7 @@ Gizo.app.gizoAnalysis.stopSavingSession()
 
 ### <mark style="color:purple;">Attach preview to camera</mark>
 
-Preview View is a Custom View that displays the camera feed for CameraX’s Preview use case. This class manages the preview of Surface’s lifecycle. After 1: Either a TextureView or a SurfaceView is used internally to display the camera feed, and necessary transformations are applied to display the preview correctly. These transformations include correcting aspect ratio, scale, and rotation.
+Preview View is a Custom View that displays the camera feed for CameraX’s Preview use case. This class manages the preview of Surface’s lifecycle. After either a TextureView or a SurfaceView is used internally to display the camera feed, necessary transformations are applied to display the preview correctly. These transformations include correcting aspect ratio, scale, and rotation.
 
 So, to display the camera, a previewView should be attached as well.
 

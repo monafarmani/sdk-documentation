@@ -20,7 +20,7 @@ layout:
 
 ## Overview
 
-The IMU setting in Gizo SDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the **accelerometer**, **gyroscope,** and **magnetometer**.
+The IMU setting in Gizo SDK allows developers to utilize the sensors that make up the device’s IMU. The IMU typically consists of the **accelerometer**, **gyroscope, gravity,** and **magnetometer**.
 
 Gizo IMU setting is used to customize some behavior and functionality of our library including specifying where to save IMU files, the period of time that an IMU data row is saved in a CSV file, the initial delay to save IMU data, the format to save date time and so on...
 
@@ -48,7 +48,7 @@ For this reason, add these lines of code in the Application class, onCreate func
 {% endtab %}
 {% endtabs %}
 
-The `GizoImuSetting` builder sets the IMU-related properties such as:
+The `GizoImuSetting` builder sets the IMU-related properties such as
 
 * <mark style="color:blue;">`allowAccelerationSensor`</mark>`(true)`: Enabling the Acceleration sensor.
 * <mark style="color:blue;">`allowMagneticSensor`</mark>`(true)`: Enabling the Magnetic sensor.
@@ -80,7 +80,7 @@ This code suggests that the `GizoAppOptions` class specifies various configurati
 
 Here are the available options that can be set in imuSetting in the Application class:
 
-<table><thead><tr><th width="286.3333333333333">Options</th><th width="198">Default Value</th><th>Description</th></tr></thead><tbody><tr><td><p>allowAccelerationSensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the acceleration sensor or not.</td></tr><tr><td><p>allowGyroscopeSensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the gyroscope sensor or not.</td></tr><tr><td><p>allowMagneticSensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the magnetic sensor or not.</td></tr><tr><td><p>allowGravitySensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the gravity sensor or not.</td></tr><tr><td><p>saveCsvFile</p><p>(Boolean)</p></td><td>false</td><td>To save CSV file or not.</td></tr><tr><td><p>fileLocation</p><p>(FileLocationPath)</p></td><td><p>FileLocationPath</p><p>.CACHE</p></td><td>To save the IMU file in download or cache.</td></tr><tr><td>saveDataTimerPeriod(Long)</td><td>10L</td><td>The period of time that an IMU data row is saved in CSV file.</td></tr><tr><td>saveDataTimerInitialDelay(Long)</td><td>0L</td><td>The initial delay to save IMU data.</td></tr><tr><td><p>saveDateDateTimeFormat</p><p>(String)</p></td><td><p>"yyyy-MM-dd</p><p>'T'HH-mm-ss-SSS'Z'"</p></td><td>The format to save date time.</td></tr></tbody></table>
+<table><thead><tr><th width="286.3333333333333">Options</th><th width="198">Default Value</th><th>Description</th></tr></thead><tbody><tr><td><p>allowAccelerationSensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the acceleration sensor or not.</td></tr><tr><td><p>allowGyroscopeSensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the gyroscope sensor or not.</td></tr><tr><td><p>allowMagneticSensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the magnetic sensor or not.</td></tr><tr><td><p>allowGravitySensor</p><p>(Boolean)</p></td><td>false</td><td>To activate the gravity sensor or not.</td></tr><tr><td><p>saveCsvFile</p><p>(Boolean)</p></td><td>false</td><td>To save CSV file or not.</td></tr><tr><td><p>fileLocation</p><p>(FileLocationPath)</p></td><td><p>FileLocationPath</p><p>.CACHE</p></td><td>To save the IMU file in download or cache.</td></tr><tr><td>saveDataTimerPeriod(Long)</td><td>10L</td><td>The period of time that an IMU data row is saved in a CSV file.</td></tr><tr><td>saveDataTimerInitialDelay(Long)</td><td>0L</td><td>The initial delay to save IMU data.</td></tr><tr><td><p>saveDateDateTimeFormat</p><p>(String)</p></td><td><p>"yyyy-MM-dd</p><p>'T'HH-mm-ss-SSS'Z'"</p></td><td>The format to save date time.</td></tr></tbody></table>
 
 
 

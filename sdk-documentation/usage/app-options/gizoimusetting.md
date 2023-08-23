@@ -60,7 +60,7 @@ The `GizoImuSetting` builder sets the IMU-related properties such as
 * <mark style="color:blue;">`saveDataTimerInitialDelay`</mark>`(0L)`: Setting the initial delay of the IMU data timer to 0 milliseconds (no delay).
 * <mark style="color:blue;">`saveDataDateTimeFormat`</mark>`("yyyy-MM-dd'T'HH-mm-ss-SSS'Z'")`: Specifying the date and time format for saving the IMU data file.
 
-**Note:** saveDataDateTimeFormat will be changed if It's going to be used locally.&#x20;
+<mark style="color:red;">**Note:**</mark> saveDataDateTimeFormat will be changed if It's going to be used locally.&#x20;
 
 
 

@@ -96,7 +96,7 @@ Gizo.app.gizoAnalysis.ttcCalculator { frontObject, speed, ttc ->
 {% endtab %}
 {% endtabs %}
 
-**Note:** The purpose of this code is to calculate the Time to Collision (TTC) using the provided `depthPtn` and `speed` values. The calculated TTC is then returned as the result of the function call & can be used in the previous tab of the code.
+<mark style="color:red;">**Note:**</mark> The purpose of this code is to calculate the Time to Collision (TTC) using the provided `depthPtn` and `speed` values. The calculated TTC is then returned as the result of the function call & can be used in the previous tab of the code.
 
 
 
@@ -112,7 +112,7 @@ Gizo.app.gizoAnalysis.ttcStatusCalculator { ttc, speed, ttcStatus ->
 {% endtab %}
 {% endtabs %}
 
-**Note:** The exact implementation of the `ttcStatusCalculator` function is not provided in the given snippet, but it is expected to perform the necessary calculations and logic to determine the TTC status based on the input parameters. The `ttcStatus` variable is likely updated within the function to reflect the calculated TTC status.
+<mark style="color:red;">**Note:**</mark> The exact implementation of the `ttcStatusCalculator` function is not provided in the given snippet, but it is expected to perform the necessary calculations and logic to determine the TTC status based on the input parameters. The `ttcStatus` variable is likely updated within the function to reflect the calculated TTC status.
 
 After the `ttcStatus` is calculated, it is returned as the result of the function call & can be used in the previous tab of the code.
 

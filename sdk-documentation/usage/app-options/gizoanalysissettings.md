@@ -96,11 +96,11 @@ The `GizoAnalysisSettings` builder sets the analysis-related properties such as:
 * <mark style="color:blue;">`loadDelegate`</mark>`(AnalysisDelegateType.Auto)`: Specifying the analysis delegate type as "Auto", which determines the best delegate based on the device's capabilities.
 * <mark style="color:blue;">`collisionThreshold`</mark>`(0.5f)`: Setting the collision threshold value for analysis.
 
-**Note:** collisionThreshold parameter can be either Float or ThresholdType.None. If ThresholdType.None is chosen as the parameter, collision wouldn't be considered in the ttc status calculation.
+<mark style="color:red;">**Note:**</mark> collisionThreshold parameter can be either Float or ThresholdType.None. If ThresholdType.None is chosen as the parameter, collision wouldn't be considered in the ttc status calculation.
 
 * <mark style="color:blue;">`tailgatingThreshold`</mark>`(1.0f)`: Setting the tailgating threshold value for analysis.
 
-**Note:** tailgatingThreshold parameter can be either Float or ThresholdType.None. If ThresholdType.None is chosen as the parameter, tailgating wouldn't be considered in the ttc status calculation.
+<mark style="color:red;">**Note:**</mark> tailgatingThreshold parameter can be either Float or ThresholdType.None. If ThresholdType.None is chosen as the parameter, tailgating wouldn't be considered in the ttc status calculation.
 
 * <mark style="color:blue;">`saveTtcCsvFile`</mark>`(true)`: Indicating that the TTC data should be saved to a file.
 * <mark style="color:blue;">`ttcFileLocation`</mark>`(FileLocationPath.CACHE)`: Specifying the file location path for storing Time-to-Collision (TTC) data (in this case, set to the cache directory).
@@ -160,6 +160,6 @@ class Application : Application() {
 {% endtab %}
 {% endtabs %}
 
-**Note:** After these settings are done, a series of callbacks are triggered so that the corresponding output can be observed.
+<mark style="color:red;">**Note:**</mark> After these settings are done, a series of callbacks are triggered so that the corresponding output can be observed.
 
-**Note:** To enable GizoAnalysisSettings, it is essential to activate [GPS Setting](broken-reference).&#x20;
+<mark style="color:red;">**Note:**</mark> To enable GizoAnalysisSettings, it is essential to activate [GPS Setting](broken-reference).&#x20;

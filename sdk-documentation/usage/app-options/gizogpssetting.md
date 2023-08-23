@@ -26,7 +26,7 @@ Gizo GPS setting is used to customize some behavior and functionality of our lib
 
 For this reason, add these lines of code in the Application class, onCreate function, inside Gizo.initialize to set the Gizo GPS Settings.
 
-**Note**: we need to get MAPBOX\_PUBLIC\_KEY from Mapbox SDK.
+<mark style="color:red;">**Note:**</mark> we need to get MAPBOX\_PUBLIC\_KEY from Mapbox SDK.
 
 {% tabs %}
 {% tab title="Kotlin" %}
@@ -61,7 +61,7 @@ The `GizoGpsSetting` builder sets the GPS-related properties such as
 * <mark style="color:blue;">`saveDatatimerInitialDelay`</mark>`(0L)`: Setting the initial delay of saving GPS data to 0 milliseconds (no delay).
 * <mark style="color:blue;">`saveDataDateTimeFormat`</mark>`("yyyy-MM-dd'T'HH-mm-ss-SSS'Z'")`: Specifying the date and time format for saving the GPS data file.
 
-**Note:** saveDataDateTimeFormat will be changed if It's going to be used locally.&#x20;
+<mark style="color:red;">**Note:**</mark> saveDataDateTimeFormat will be changed if It's going to be used locally.&#x20;
 
 
 

@@ -20,7 +20,7 @@ layout:
 
 ## Overview
 
-Permissions in Android Studio refer to the security mechanisms that control an application's access to specific resources or features of the device. These permissions are declared in the AndroidManifest.xml file and are essential for ensuring user privacy and security.
+Permissions refer to the security mechanisms that control an application's access to specific resources or features of the device. These permissions are declared in the AndroidManifest.xml file and are essential for ensuring user privacy and security.
 
 It's important to note that starting from Android 6.0 (API level 23), dangerous permissions are requested at runtime, even if they are declared in the manifest. This means that the user can grant or deny the permission when the application is running, and the application must handle the permission flow accordingly.
 
